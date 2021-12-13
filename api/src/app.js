@@ -5,4 +5,6 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.listen(process.env.APP_PORT)
+const port = process.env.APP_PORT || 8888
+
+app.listen(port, () => console.log(new Date().toISOString() + ` -> Started at ${port}`))

@@ -11,7 +11,8 @@
   "author": "Sergey Gerenko",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
