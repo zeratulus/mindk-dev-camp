@@ -1,10 +1,11 @@
-const express = require('express')
-const app = express()
+const express = require('express');
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
-})
+const app = express();
 
-const port = process.env.APP_PORT || 8888
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
-app.listen(port, () => console.log(new Date().toISOString() + ` -> Started at ${port}`))
+const port = process.env.APP_PORT || 8888;
+
+app.listen(port, () => console.log(`${new Date().toISOString()} -> Started at ${port}`));

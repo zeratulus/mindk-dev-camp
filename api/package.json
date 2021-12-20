@@ -6,19 +6,28 @@
   "scripts": {
     "prepare": "cd .. && husky install api/.husky",
     "dev": "nodemon -r dotenv/config ./src/app.js",
+    "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergey Gerenko",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0",
+    "ws": "^8.3.0"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
-    "eslint": "^8.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "nodemon": "^2.0.15",
