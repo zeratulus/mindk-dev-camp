@@ -1,0 +1,28 @@
+{
+  "name": "mindk-dev-camp",
+  "version": "1.0.0",
+  "description": "The purpose of dev camp is to create a Prototype of Social Network =].",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeratulus/mindk-dev-camp.git"
+  },
+  "keywords": [],
+  "author": "Sergey Gerenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeratulus/mindk-dev-camp/issues"
+  },
+  "homepage": "https://github.com/zeratulus/mindk-dev-camp#readme",
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

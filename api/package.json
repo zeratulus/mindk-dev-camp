@@ -1,10 +1,9 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "prepare": "cd .. && husky install api/.husky",
+    "prepare": "cd .. && husky install ./api/.husky",
     "dev": "nodemon -r dotenv/config ./src/app.js",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,7 +27,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "nodemon": "^2.0.15",
     "prettier": "2.5.1"
@@ -40,15 +38,9 @@
     ],
     "delay": 2500
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "**/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  }
+    "src/*": "eslint"
+  },
+  "keywords": [],
+  "description": ""
 }
