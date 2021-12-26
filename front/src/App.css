@@ -1,3 +1,21 @@
+/* Default Scrollbars*/
+div.table-responsive::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+div.table-responsive::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  border-radius: 40px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+div.table-responsive::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background-color: #888;
+  outline: 1px solid slategrey;
+}
+/* End of Default Scrollbars*/
+
 .App {
   text-align: center;
 }
