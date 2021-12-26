@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import {UserPostContainer} from "./containers/userPost";
+import {AppHeaderContainer} from "./containers/header";
+import {AppBodyContainer} from "./containers/body";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <UserPostContainer content={'Just some example of userPost content...'} />
-      </header>
+        <AppHeaderContainer/>
+        <AppBodyContainer/>
     </div>
   );
 }
