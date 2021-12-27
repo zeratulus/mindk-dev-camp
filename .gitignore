@@ -1,4 +1,5 @@
 .idea
 .git
 node_modules
+db_files
 readme.md.bak
