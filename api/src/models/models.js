@@ -27,7 +27,7 @@ Post.hasMany(PostCommentary);
 PostCommentary.belongsTo(User);
 PostCommentary.hasMany(PostCommentary, {
     foreignKey: 'replyId'
-})
+});
 /* End of Relations */
 
 module.exports = {
