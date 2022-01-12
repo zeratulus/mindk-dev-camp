@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,8 +8,13 @@ import Box from '@mui/material/Box';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Editor } from '@tinymce/tinymce-react';
+import React, {useRef} from "react";
 
 export function AddPost() {
+
+    const editorRef = useRef(null);
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -19,7 +23,7 @@ export function AddPost() {
     };
 
     return (
-        <Container component="main" maxWidth="xs">
+        <Container component="main">
             <CssBaseline />
             <Box
                 sx={{
@@ -37,15 +41,25 @@ export function AddPost() {
                 </Typography>
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
 
-                    <TextField
-                        required
-                        id="post"
-                        name="post"
-                        label="post"
-                        fullWidth
-                        margin="normal"
-                        multiline
-                        minRows={4}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        initialValue="<p>This is the initial content of the editor.</p>"
+                        init={{
+                            height: 400,
+                            menubar: false,
+                            plugins: [
+                                'advlist autolink lists link image charmap print preview anchor',
+                                'searchreplace visualblocks code fullscreen',
+                                'insertdatetime media table paste code help wordcount emoticons'
+                            ],
+                            toolbar: 'undo redo | formatselect | ' +
+                                'bold italic backcolor | alignleft aligncenter ' +
+                                'alignright alignjustify | bullist numlist outdent indent | ' +
+                                'removeformat | emoticons | help',
+                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                            skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
+                            content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "")
+                        }}
                     />
 
                     <Button
