@@ -13,7 +13,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 export function UserPost({content}) {
     return (
-        <Card sx={{ maxWidth: 400 }}>
+        <Card sx={{ maxWidth: 500, marginBottom: '10px' }}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">

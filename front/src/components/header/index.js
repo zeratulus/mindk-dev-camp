@@ -11,36 +11,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Routes, Route, Link } from "react-router-dom";
 import UserContext from '../../context/user';
-import { Context } from "../../context/context";
 
 const pages = [];
 
 export const AppHeader = () => {
     const user = useContext(UserContext);
-    const [context, setContext] = useContext(Context);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const [visibleComponent, setVisibleComponent] = React.useState(context);
-
-    const handleComponent = (componentName) => {
-        setVisibleComponent(componentName);
-        setContext(componentName);
-        console.log('Context: ' + context);
-        console.log('State: ' + visibleComponent);
-    };
-
-    const feedClick = (event) => {
-        handleComponent('feed');
-    };
-
-    const profileClick = (event) => {
-        handleComponent('profile');
-    };
-
-    const addPostClick = (event) => {
-        handleComponent('add_post');
-    };
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -117,20 +96,27 @@ export const AppHeader = () => {
                         LOGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Button
-                            onClick={addPostClick}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >Add Post</Button>
+                        <Link to={"/login"}>
+                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign In</Button>
+                        </Link>
 
-                        <Button
-                            onClick={profileClick}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >Profile</Button>
+                        <Link to={"/register"}>
+                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign Up</Button>
+                        </Link>
 
-                        <Button
-                            onClick={feedClick}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >Feed</Button>
+
+                        <Link to={"/addPost"}>
+                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Add Post</Button>
+                        </Link>
+
+                        <Link to={"/profile"}>
+                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Profile</Button>
+                        </Link>
+
+                        <Link to={"/feed"}>
+                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Feed</Button>
+                        </Link>
+
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
@@ -139,39 +125,6 @@ export const AppHeader = () => {
                                 <Avatar>{user.firstName.substr(0,1)}</Avatar>
                             </IconButton>
                         </Tooltip>
-
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {/*<MenuItem onClick={handleComponent('add_post')}>*/}
-                            {/*    <Typography textAlign="center">Add Post</Typography>*/}
-                            {/*</MenuItem>*/}
-
-                            {/*<MenuItem onClick={handleComponent('feed')}>*/}
-                            {/*    <Typography textAlign="center">Feed</Typography>*/}
-                            {/*</MenuItem>*/}
-
-                            {/*<MenuItem onClick={handleComponent('profile')}>*/}
-                            {/*    <Typography textAlign="center">Profile</Typography>*/}
-                            {/*</MenuItem>*/}
-
-                            {/*<MenuItem>*/}
-                            {/*    <Typography textAlign="center">Logout</Typography>*/}
-                            {/*</MenuItem>*/}
-                        </Menu>
                     </Box>
                 </Toolbar>
             </Container>
