@@ -10,6 +10,4 @@ const PostLike = sequelize.define('postLike', {
     paranoid: true,
 });
 
-module.exports = {
-    PostLike
-}
+module.exports = PostLike;

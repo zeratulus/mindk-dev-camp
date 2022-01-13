@@ -8,6 +8,4 @@ const University = sequelize.define('university', {
     address: {type: DataTypes.TEXT},
 });
 
-module.exports = {
-    University
-}
+module.exports = University;

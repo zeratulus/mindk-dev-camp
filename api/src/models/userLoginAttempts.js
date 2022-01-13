@@ -9,6 +9,4 @@ const UserLoginAttempts = sequelize.define('userLoginAttempts', {
     userAgent: {type: DataTypes.TEXT},
 });
 
-module.exports = {
-    UserLoginAttempts
-}
+module.exports = UserLoginAttempts;

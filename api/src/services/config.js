@@ -1,6 +1,7 @@
 module.exports = {
     app: {
         port: process.env.APP_PORT || 8888,
+        isDebug: process.env.DEV || false,
     },
     db: {
         host: process.env.DB_HOST || 'localhost',

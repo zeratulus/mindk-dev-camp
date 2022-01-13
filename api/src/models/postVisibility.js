@@ -6,6 +6,4 @@ const PostVisibility = sequelize.define('postVisibility', {
     title: {type: DataTypes.TEXT}
 });
 
-module.exports = {
-    PostVisibility
-}
+module.exports = PostVisibility;

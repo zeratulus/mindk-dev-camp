@@ -9,6 +9,4 @@ const UserProfilePropsVisibility = sequelize.define('userProfilePropsVisibility'
     university: {type: DataTypes.INTEGER(2)},
 });
 
-module.exports = {
-    UserProfilePropsVisibility
-}
+module.exports = UserProfilePropsVisibility;
