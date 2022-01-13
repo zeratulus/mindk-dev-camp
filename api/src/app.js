@@ -15,7 +15,7 @@ app.use('/', routes);
 
 const start = async () => {
     try {
-        // await sequelize.authenticate();
+        await sequelize.authenticate();
         await sequelize.sync();
 
         app.listen(config.app.port, () => log(`Started at port: ${config.app.port}`));
