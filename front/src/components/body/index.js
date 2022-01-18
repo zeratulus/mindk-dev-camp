@@ -1,30 +1,28 @@
-import React, { useContext } from 'react';
-import { Routes, Route, Link } from "react-router-dom";
-import UserContext from "../../context/user";
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import {SignInContainer} from "../../containers/signIn";
 import {SignUpContainer} from "../../containers/signUp";
 import {ProfileContainer} from "../../containers/profile";
 import {AddPostContainer} from "../../containers/addPost";
 import {FeedContainer} from "../../containers/feed";
-import Test from "../test";
+import {ErrorBoundary} from 'react-error-boundary'
+import {ErrorFallback} from "../errorFallback";
 
 export function AppBody() {
 
-    const user = useContext(UserContext);
-
     return (
-        <div className="app-body">
-            <Routes>
-                <Route path="profile" element={<ProfileContainer />} />
-                <Route path="addPost" element={<AddPostContainer />} />
-                <Route path="feed" element={<FeedContainer />} />
-                <Route path="login" element={<SignInContainer />} />
-                <Route path="register" element={<SignUpContainer />} />
-                <Route path="/posts/num/:id" element={<Test />} />
-                <Route path="/posts/upperaz/:id" element={<Test />} />
-                <Route path="/posts/file/:id" element={<Test />} />
-                <Route path="/posts/date/:id" element={<Test />} />
-            </Routes>
-        </div>
+        <ErrorBoundary FallbackComponent={ErrorFallback('')}>
+            <div className="app-body">
+                <Routes>
+                    <Route path="/" element={<FeedContainer />} />
+                    <Route path="feed" element={<FeedContainer />} />
+                    <Route path="profile" element={<ProfileContainer />} />
+                    <Route path="addPost" element={<AddPostContainer />} />
+                    <Route path="signin" element={<SignInContainer />} />
+                    <Route path="signup" element={<SignUpContainer />} />
+                    <Route path="*" element={<ErrorFallback message={'404 - Page not found'} />} />
+                </Routes>
+            </div>
+        </ErrorBoundary>
     );
 }
