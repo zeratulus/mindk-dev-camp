@@ -96,11 +96,11 @@ export const AppHeader = () => {
                         LOGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Link to={"/login"}>
+                        <Link to={"/signin"}>
                             <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign In</Button>
                         </Link>
 
-                        <Link to={"/register"}>
+                        <Link to={"/signup"}>
                             <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign Up</Button>
                         </Link>
 
@@ -120,9 +120,9 @@ export const AppHeader = () => {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title={`Hello ${user.firstName}`}>
+                        <Tooltip title={`Hello ${user.data.firstName}`}>
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar>{user.firstName.substr(0,1)}</Avatar>
+                                <Avatar>{user.data.firstName.substr(0,1)}</Avatar>
                             </IconButton>
                         </Tooltip>
                     </Box>

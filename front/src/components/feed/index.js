@@ -7,7 +7,30 @@ import {UserPostContainer} from "../../containers/userPost";
 
 export function Feed() {
 
-    let posts = [];
+    const [posts, setPosts] = React.useState(
+        [
+            {
+                id: 'uuid::v4::here::1',
+                body: 'Just some example content of UserPost',
+                createdAt: '18.01.2022',
+                userId: 'uuid::v4::here',
+                firstName: 'Serhii',
+                lastName: 'Herenko',
+            },
+            {
+                id: 'uuid::v4::here::2',
+                body: 'Just some another example content of UserPost... =]',
+                createdAt: '18.01.2022',
+                userId: 'uuid::v4::here',
+                firstName: 'John',
+                lastName: 'Joe',
+            }
+        ]
+    );
+
+    const feedItems = posts.map( (post) =>
+        <UserPostContainer key={post.id} post={post}></UserPostContainer>
+    );
 
     return (
         <Container>
@@ -24,11 +47,7 @@ export function Feed() {
                     Your Feed
                 </Typography>
                 <Box sx={{ mt: 1 }}>
-
-                    <UserPostContainer content={'Just some example content of UserPost'}></UserPostContainer>
-
-                    <UserPostContainer content={'Just some example content of UserPost'}></UserPostContainer>
-
+                    {feedItems}
                 </Box>
             </Box>
         </Container>

@@ -2,9 +2,12 @@ import { createContext } from 'react';
 
 const UserContext = createContext({
     isLogged: false,
-    currentComponent: 'add_post',
-    firstName: 'Guest',
-    lastName: '',
-    email: '',
+    data: {
+        id: '',
+        firstName: 'Guest',
+        lastName: '',
+        email: '',
+        phone: '',
+    }
 });
 export default UserContext;

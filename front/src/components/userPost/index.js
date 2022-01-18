@@ -10,14 +10,15 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PropTypes from 'prop-types';
 
-export function UserPost({content}) {
+function UserPost({post}) {
     return (
         <Card sx={{ maxWidth: 500, marginBottom: '10px' }}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
-                        R
+                        {post.firstName.substr(0,1)}
                     </Avatar>
                 }
                 action={
@@ -25,12 +26,12 @@ export function UserPost({content}) {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="user.name"
-                subheader="December 26, 2021"
+                title={post.firstName + ' ' + post.lastName}
+                subheader={post.createdAt}
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    {content}
+                    {post.body}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -44,3 +45,18 @@ export function UserPost({content}) {
         </Card>
     );
 }
+
+UserPost.propTypes = {
+    post: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        body: PropTypes.string.isRequired,
+        createdAt: PropTypes.string.isRequired,
+        userId: PropTypes.string.isRequired,
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired
+    }),
+}
+
+export {
+    UserPost
+};
