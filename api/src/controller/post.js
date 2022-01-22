@@ -1,5 +1,6 @@
 const uuid = require('uuid');
 const Post = require('../models/post');
+const User = require("../models/user");
 const {processError} = require("../utils");
 
 class PostController {
@@ -30,6 +31,23 @@ class PostController {
         });
     }
 
+    findByUserId(req, res) {
+        Post.findAll({
+            where: {userId: req.params.id},
+            include: [{
+                model: User,
+                attributes: ['firstName', 'lastName', 'avatar']
+            }],
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        }).then((data) => {
+            res.send(data);
+        }).catch((error) => {
+            processError(res, error);
+        });
+    }
+
     deleteById(req, res) {
         Post.destroy({where: {id: req.params.id}}).then((data) => {
             res.status(200).json({
@@ -52,7 +70,15 @@ class PostController {
     }
 
     find(req, res) {
-        Post.findAll().then((data) => {
+        Post.findAll({
+            include: [{
+                model: User,
+                attributes: ['firstName', 'lastName', 'avatar']
+            }],
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        }).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
