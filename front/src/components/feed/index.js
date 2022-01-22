@@ -1,54 +1,42 @@
 import * as React from 'react';
+import { useQuery, useQueryClient } from 'react-query';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {UserPostContainer} from "../../containers/userPost";
+import AxiosService from "../../services/AxiosService";
+import {CircularProgress} from "@mui/material";
+import {Preloader} from "../preloader";
+
 
 export function Feed() {
 
-    const [posts, setPosts] = React.useState(
-        [
-            {
-                id: 'uuid::v4::here::1',
-                body: 'Just some example content of UserPost',
-                createdAt: '18.01.2022',
-                userId: 'uuid::v4::here',
-                firstName: 'Serhii',
-                lastName: 'Herenko',
-            },
-            {
-                id: 'uuid::v4::here::2',
-                body: 'Just some another example content of UserPost... =]',
-                createdAt: '18.01.2022',
-                userId: 'uuid::v4::here',
-                firstName: 'John',
-                lastName: 'Joe',
-            }
-        ]
-    );
+    const [posts, setPosts] = React.useState([]);
 
-    const feedItems = posts.map( (post) =>
+    const fetchPosts = async () => {
+        let posts = await AxiosService.get('/post');
+        setPosts(posts.data);
+    };
+
+    const { isLoading, isFetching, isError, data, error } = useQuery('posts', fetchPosts);
+
+    const feedItems = posts.map((post) =>
         <UserPostContainer key={post.id} post={post}></UserPostContainer>
     );
 
+    if (isFetching) {
+        return (<Preloader/>);
+    }
+
     return (
         <Container>
-            <CssBaseline />
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <Typography component="h1" variant="h5">
-                    Your Feed
-                </Typography>
-                <Box sx={{ mt: 1 }}>
-                    {feedItems}
-                </Box>
+            <CssBaseline/>
+            <Typography component="h1" variant="h5" sx={{ marginTop: '10px' }}>
+                Your Feed
+            </Typography>
+            <Box sx={{mt: 1}}>
+                {feedItems}
             </Box>
         </Container>
     );

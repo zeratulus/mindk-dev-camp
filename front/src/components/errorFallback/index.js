@@ -22,7 +22,7 @@ function ErrorFallback({ message }) {
                 }}
             >
                 <Typography component="h1" variant="h1">
-                    <AutoGraphOutlinedIcon fontSize={'72px'} /> Oops =[
+                    💩 Oops 💩
                 </Typography>
                 <Typography component="h4" variant="h4">
                     Something went wrong...

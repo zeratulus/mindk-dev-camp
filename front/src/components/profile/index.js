@@ -7,13 +7,25 @@ import Box from '@mui/material/Box';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import {useUser} from "../../hooks/user";
+import AxiosService from "../../services/AxiosService";
 
 function Profile() {
+
+    const [user, setUser] = useUser();
+
+    const [firstName, setFirstName] = React.useState();
+    const [lastName, setLastName] = React.useState();
+    const [email, setEmail] = React.useState();
+    const [phone, setPhone] = React.useState();
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        console.log(data);
+        let data = {
+            firstName,
+            lastName
+        }
+        AxiosService.post('/user/:id/profile', data);
     };
 
     return (
@@ -43,6 +55,8 @@ function Profile() {
                         fullWidth
                         autoComplete="given-name"
                         margin="normal"
+                        onChange={e => setFirstName(e.target.value)}
+                        value={user.data.firstName}
                     />
 
                     <TextField
@@ -53,6 +67,8 @@ function Profile() {
                         fullWidth
                         autoComplete="family-name"
                         margin="normal"
+                        onChange={e => setLastName(e.target.value)}
+                        value={user.data.lastName}
                     />
 
                     <TextField
@@ -63,6 +79,8 @@ function Profile() {
                         fullWidth
                         autoComplete="email"
                         margin="normal"
+                        value={user.data.email}
+                        readonly
                     />
 
                     <TextField
@@ -73,6 +91,8 @@ function Profile() {
                         fullWidth
                         autoComplete="phone"
                         margin="normal"
+                        value={user.data.phone}
+                        readonly
                     />
 
                     <Button

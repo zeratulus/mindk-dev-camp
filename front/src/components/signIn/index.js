@@ -10,11 +10,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AxiosService from '../../services/AxiosService';
+import {useNavigate} from "react-router-dom";
 
 export function SignIn() {
 
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const navigate = useNavigate();
 
     const handlePassword = (event) => {
         setPassword(event.target.value);
@@ -34,8 +36,9 @@ export function SignIn() {
             email,
             password
         }).then(res => {
-            console.log(res);
             console.log(res.data);
+            sessionStorage.setItem('user', JSON.stringify(res.data));
+            navigate('/feed');
         });
     };
 

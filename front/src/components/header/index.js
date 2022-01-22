@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,13 +11,33 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Routes, Route, Link } from "react-router-dom";
-import UserContext from '../../context/user';
-
-const pages = [];
+import { Link } from "react-router-dom";
+import {useUser} from "../../hooks/user";
+import {getUserFromStorage} from "../../utils";
 
 export const AppHeader = () => {
-    const user = useContext(UserContext);
+    //TODO: Fix bug with not re-render on login =[
+
+    const [pages, setPages] = React.useState([]);
+    const [user, setUser] = useUser();
+    const [isLogged, setIsLogged] = React.useState(user.isLogged);
+
+    function storageEventHandler(e) {
+        console.log('Storage handler fires >>>');
+        let user = getUserFromStorage();
+        console.log(user);
+        setUser(user);
+        setIsLogged(user.isLogged);
+    }
+
+    React.useEffect(() => {
+        console.log(">>> useEffect >>> window.addEventListener('storage', storageEventHandler);")
+        window.addEventListener('storage', storageEventHandler);
+
+    }, []);
+
+    let avatar = user.data.firstName.substr(0,1);
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -39,7 +59,7 @@ export const AppHeader = () => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="fixed">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -48,7 +68,7 @@ export const AppHeader = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        Socialize
+                        <Link to={'/'}>Socialize</Link>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -93,39 +113,57 @@ export const AppHeader = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        LOGO
+                        <Link to={'/'}>Socialize</Link>
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {!isLogged &&
                         <Link to={"/signin"}>
                             <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign In</Button>
                         </Link>
+                        }
 
+                        {!isLogged &&
                         <Link to={"/signup"}>
-                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Sign Up</Button>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Sign Up</Button>
                         </Link>
+                        }
 
-
-                        <Link to={"/addPost"}>
-                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Add Post</Button>
-                        </Link>
-
-                        <Link to={"/profile"}>
-                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Profile</Button>
-                        </Link>
-
+                        {isLogged &&
                         <Link to={"/feed"}>
-                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Feed</Button>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Feed</Button>
                         </Link>
-
+                        }
+                        {isLogged &&
+                        <Link to={"/friends"}>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Friends</Button>
+                        </Link>
+                        }
+                        {isLogged &&
+                        <Link to={"/addPost"}>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Add Post</Button>
+                        </Link>
+                        }
+                        {isLogged &&
+                        <Link to={"/profile"}>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Profile</Button>
+                        </Link>
+                        }
+                        {isLogged &&
+                        <Link to={"/logout"}>
+                            <Button sx={{my: 2, color: 'white', display: 'block'}}>Log out</Button>
+                        </Link>
+                        }
                     </Box>
 
+                    {isLogged &&
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title={`Hello ${user.data.firstName}`}>
+                        <Tooltip title={`Hello ${user.data.firstName + ' ' + user.data.lastName}`}>
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar>{user.data.firstName.substr(0,1)}</Avatar>
+                                <Avatar>{avatar}</Avatar>
                             </IconButton>
                         </Tooltip>
                     </Box>
+                    }
                 </Toolbar>
             </Container>
         </AppBar>

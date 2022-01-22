@@ -1,76 +1,127 @@
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Editor } from '@tinymce/tinymce-react';
-import React, {useRef} from "react";
+import React from "react";
+import {useUser} from "../../hooks/user";
+import AxiosService from "../../services/AxiosService";
+import {useNavigate} from "react-router-dom";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from '@mui/icons-material/Close';
+import {Link} from "react-router-dom";
+import Box from "@mui/material/Box";
+import {CircularProgress} from "@mui/material";
+import {Preloader} from "../preloader";
 
 export function AddPost() {
+    const [user, setUser] = useUser();
+    const editorRef = React.useRef(null);
+    //TODO: Alert component
+    const Alert = React.forwardRef(function Alert(props, ref) {
+        return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+    });
+    const [alertVisible, setAlertVisible] = React.useState(false);
+    const [alertMessage, setAlertMessage] = React.useState('');
+    const [alertSeverity, setAlertSeverity] = React.useState('success');
+    const handleAlertClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setAlertVisible(false);
+    };
+    const alertAction = (
+        <React.Fragment>
+            <Link to={'/feed'}>
+                <Button color="primary" size="small">Go To Feed</Button>
+            </Link>
+            <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleAlertClose}
+            >
+                <CloseIcon fontSize="small" />
+            </IconButton>
+        </React.Fragment>
+    );
+    //TODO: ./ Alert component
 
-    const editorRef = useRef(null);
+    const navigation = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        console.log(data);
+        if (editorRef.current) {
+            let data = {
+                userId: user.data.id,
+                visibilityId: user.data.id, //todo
+                body: editorRef.current.getContent()
+            }
+            AxiosService.post('/post', data).then((res) => {
+                editorRef.current.setContent('');
+                setAlertSeverity('success');
+                setAlertMessage('Success: Your post was published!');
+                setAlertVisible(true);
+            }).catch(error => {
+                setAlertSeverity('error');
+                setAlertMessage('Error: ' + error.message);
+                setAlertVisible(true);
+                console.log()
+            });
+        }
     };
+
+    if (editorRef === null) {
+        return (<Preloader/>);
+    }
 
     return (
         <Container component="main">
             <CssBaseline />
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
+
+            <Typography component="h1" variant="h5" sx={{ marginTop: '10px' }}>
+                <AddCommentIcon /> Add Post
+            </Typography>
+
+            <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                initialValue=""
+                init={{
+                    height: 400,
+                    menubar: 'edit',
+                    plugins: [
+                        'advlist autolink lists link charmap print preview anchor paste',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help wordcount emoticons image imagetools'
+                    ],
+                    toolbar: 'undo redo | paste | formatselect | ' +
+                        'bold italic backcolor | alignleft aligncenter ' +
+                        'alignright alignjustify | bullist numlist outdent indent | ' +
+                        'removeformat | image | emoticons | help',
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                    skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
+                    content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""),
+                    paste_data_images: true
                 }}
-            >
-                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                    <AddCommentIcon />
-                </Avatar>
-                <Typography component="h1" variant="h5">
-                    Add Post
-                </Typography>
-                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            />
 
-                    <Editor
-                        onInit={(evt, editor) => editorRef.current = editor}
-                        initialValue="<p>This is the initial content of the editor.</p>"
-                        init={{
-                            height: 400,
-                            menubar: false,
-                            plugins: [
-                                'advlist autolink lists link image charmap print preview anchor',
-                                'searchreplace visualblocks code fullscreen',
-                                'insertdatetime media table paste code help wordcount emoticons'
-                            ],
-                            toolbar: 'undo redo | formatselect | ' +
-                                'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify | bullist numlist outdent indent | ' +
-                                'removeformat | emoticons | help',
-                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-                            skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
-                            content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "")
-                        }}
-                    />
+            <Button
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+                onClick={handleSubmit}
+            >Publish</Button>
 
-                    <Button
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        sx={{ mt: 3, mb: 2 }}
-                    >Publish</Button>
+            {/*TODO: Alert component*/}
+            <Snackbar open={alertVisible} autoHideDuration={6000} onClose={handleAlertClose}>
+                <Alert onClose={handleAlertClose} severity={alertSeverity} sx={{ width: '100%' }} action={alertSeverity === 'success' ? alertAction : ''}>
+                    {alertMessage}
+                </Alert>
+            </Snackbar>
 
-                </Box>
-            </Box>
         </Container>
     );
 }
