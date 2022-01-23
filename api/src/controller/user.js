@@ -1,5 +1,6 @@
 const uuid = require('uuid');
 const crypto = require('crypto');
+const UserProfilePropsVisibility = require('../models/userProfilePropsVisibility');
 const User = require('../models/user');
 const Post = require("../models/post");
 const {Sequelize} = require("sequelize");
@@ -35,7 +36,12 @@ const UserController = {
     },
 
     findById(req, res) {
-        User.findByPk(req.params.id, visibleFields).then((data) => {
+        const id = req.params.id;
+        User.findByPk(id, {...{
+                include: [{
+                    model: UserProfilePropsVisibility,
+                }],
+            },...visibleFields}).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
@@ -72,7 +78,11 @@ const UserController = {
     },
 
     find(req, res) {
-        User.findAll(visibleFields).then((data) => {
+        User.findAll({...{
+            include: [{
+                model: UserProfilePropsVisibility,
+            }],
+        },...visibleFields}).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
