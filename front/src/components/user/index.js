@@ -12,13 +12,14 @@ import {UserPostContainer} from "../../containers/userPost";
 
 function User() {
 
-    const [user, setUser] = React.useState();
+    const [user, setUser] = React.useState(null);
     const [posts, setPosts] = React.useState([]);
     const params = useParams();
 
     async function fetchUser() {
         // let results = await AxiosService.get(`/user/${params.id}/friends`);
         let results = await AxiosService.get(`/user/${params.id}`);
+        console.log(results.data);
         setUser(results.data);
 
         AxiosService.get(`/post/${params.id}/user`).then((data) => {

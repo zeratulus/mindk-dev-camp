@@ -4,21 +4,24 @@ import AddCommentIcon from '@mui/icons-material/AddComment';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Editor } from '@tinymce/tinymce-react';
-import React from "react";
+import React, {useState} from "react";
 import {useUser} from "../../hooks/user";
 import AxiosService from "../../services/AxiosService";
-import {useNavigate} from "react-router-dom";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from '@mui/icons-material/Close';
 import {Link} from "react-router-dom";
-import Box from "@mui/material/Box";
-import {CircularProgress} from "@mui/material";
+import {FormControl, InputLabel, Select} from "@mui/material";
 import {Preloader} from "../preloader";
+import {getVisibilityList, PV_PUBLIC} from "../../utils";
+import MenuItem from "@mui/material/MenuItem";
 
 export function AddPost() {
     const [user, setUser] = useUser();
+    const [visibilityList, setVisibilityList] = useState(getVisibilityList);
+    const [visibility, setVisibility] = useState(PV_PUBLIC.id);
+
     const editorRef = React.useRef(null);
     //TODO: Alert component
     const Alert = React.forwardRef(function Alert(props, ref) {
@@ -50,14 +53,12 @@ export function AddPost() {
     );
     //TODO: ./ Alert component
 
-    const navigation = useNavigate();
-
     const handleSubmit = (event) => {
         event.preventDefault();
         if (editorRef.current) {
             let data = {
                 userId: user.data.id,
-                visibilityId: user.data.id, //todo
+                visibilityId: visibility,
                 body: editorRef.current.getContent()
             }
             AxiosService.post('/post', data).then((res) => {
@@ -78,6 +79,10 @@ export function AddPost() {
         return (<Preloader/>);
     }
 
+    const visiblitiesOptions = visibilityList.map(({id, title}) => {
+        return (<MenuItem value={id}>{title}</MenuItem>)
+    })
+
     return (
         <Container component="main">
             <CssBaseline />
@@ -86,12 +91,25 @@ export function AddPost() {
                 <AddCommentIcon /> Add Post
             </Typography>
 
+            <FormControl fullWidth sx={{ mb: '10px', mt: '10px'}}>
+                <InputLabel id="visibility">Visibility</InputLabel>
+                <Select
+                    labelId="visibility"
+                    id="visibility-select"
+                    value={visibility}
+                    label="Visibility"
+                    onChange={e => setVisibility(e.target.value)}
+                >
+                    {visiblitiesOptions}
+                </Select>
+            </FormControl>
+
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 initialValue=""
                 init={{
                     height: 400,
-                    menubar: 'edit',
+                    menubar: false,
                     plugins: [
                         'advlist autolink lists link charmap print preview anchor paste',
                         'searchreplace visualblocks code fullscreen',

@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {useUser} from "../../hooks/user";
 import AxiosService from "../../services/AxiosService";
+import Card from "@mui/material/Card";
 
 function Profile() {
 
@@ -18,6 +19,8 @@ function Profile() {
     const [lastName, setLastName] = React.useState();
     const [email, setEmail] = React.useState();
     const [phone, setPhone] = React.useState();
+
+    const [visibilityProps, setVisibilityProps] = React.useState();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -31,9 +34,10 @@ function Profile() {
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <Box
+            <Card
                 sx={{
-                    marginTop: 8,
+                    mt: 10,
+                    padding: '10px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -103,7 +107,7 @@ function Profile() {
                     >Save</Button>
 
                 </Box>
-            </Box>
+            </Card>
         </Container>
     );
 }
