@@ -1,4 +1,4 @@
-#Social Network Design Document
+#Social Network Prototype
 
 The purpose of dev camp is to create a Prototype of Social Network =].
 
@@ -10,5 +10,13 @@ Information:
  
 ##Entities Description:
  - see ./api/src/models
+
+To start:
+
+docker-compose up
+
+or
+
+docker compose up
 
 With best regards Serhii Herenko.
