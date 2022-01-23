@@ -3,35 +3,16 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import {CircularProgress, ListItemAvatar} from "@mui/material";
-import {useQuery} from "react-query";
+import {ListItemAvatar} from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import AxiosService from "../../services/AxiosService";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import {Link} from "react-router-dom";
-import {Preloader} from "../preloader";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 
-function Friends() {
-
-    const [friends, setFriends] = React.useState([]);
-
-    async function fetchFriends () {
-        // let results = await AxiosService.get('/user/:id/friends');
-        let results = await AxiosService.get('/user');
-        setFriends(results.data);
-        return results.data;
-    }
-
-    const { isLoading, isFetching, isError, data, error } = useQuery('friends', fetchFriends);
-
-    if (isFetching) {
-        return (<Preloader/>);
-    }
+function Friends({friends}) {
 
     const friendsList = friends.map((friend) =>
         <Link to={`/user/${friend.id}`} key={friend.id}>

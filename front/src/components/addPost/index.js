@@ -80,7 +80,7 @@ export function AddPost() {
     }
 
     const visiblitiesOptions = visibilityList.map(({id, title}) => {
-        return (<MenuItem value={id}>{title}</MenuItem>)
+        return (<MenuItem key={id} value={id}>{title}</MenuItem>)
     })
 
     return (

@@ -16,6 +16,8 @@ function getUserFromStorage() {
     }
 }
 
+//Friends visibility predefined list
+
 const PV_PUBLIC = {
     id: '123e023c-852e-4346-8809-4f9fad733820',
     title: 'Public'

@@ -5,8 +5,6 @@ import {Link} from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
-import PropTypes from 'prop-types';
 
 function ErrorFallback({ message }) {
 
@@ -40,10 +38,6 @@ function ErrorFallback({ message }) {
            </Box>
         </Container>
     );
-}
-
-ErrorFallback.propTypes = {
-    message: PropTypes.string
 }
 
 export {
