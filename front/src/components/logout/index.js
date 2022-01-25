@@ -7,7 +7,6 @@ import {func} from "prop-types";
 export function Logout() {
 
     sessionStorage.removeItem('user');
-    const [user, setUser] = useUser();
 
     return (
         <Container component="main" maxWidth="xs">

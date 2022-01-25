@@ -75,10 +75,6 @@ export function AddPost() {
         }
     };
 
-    if (editorRef === null) {
-        return (<Preloader/>);
-    }
-
     const visiblitiesOptions = visibilityList.map(({id, title}) => {
         return (<MenuItem key={id} value={id}>{title}</MenuItem>)
     })
