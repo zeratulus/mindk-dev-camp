@@ -1,10 +1,10 @@
 import {Editor} from "@tinymce/tinymce-react";
 import React from "react";
 
-export function TinyMCE({editorRef}) {
+export function TinyMCE({editorRef, value}) {
     return (<Editor
         onInit={(evt, editor) => editorRef.current = editor}
-        initialValue=""
+        initialValue={value}
         init={{
             height: 360,
             menubar: false,

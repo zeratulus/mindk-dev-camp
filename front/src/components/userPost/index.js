@@ -5,10 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
+import UserPostMenu from './userPostMenu';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
@@ -17,14 +16,8 @@ import {getUserFromStorage} from "../../utils";
 function UserPost({post}) {
 
     const user = getUserFromStorage();
-
-    const postActions = (
-        <React.Fragment>
-            <IconButton aria-label="settings">
-                <MoreVertIcon/>
-            </IconButton>
-        </React.Fragment>
-    );
+    const avatarString = post.user.firstName.substr(0,1);
+    const fullName = post.user.firstName + ' ' + post.user.lastName;
 
     return (
         <Card sx={{ marginBottom: '10px' }}>
@@ -32,12 +25,12 @@ function UserPost({post}) {
                 avatar={
                     <Link to={'/user/' + post.userId}>
                         <Avatar aria-label="recipe">
-                            {post.user.firstName.substr(0,1)}
+                            {avatarString}
                         </Avatar>
                     </Link>
                 }
-                action={(post.userId === user.data.id) && postActions}
-                title={<Link to={'/user/' + post.userId}>{post.user.firstName + ' ' + post.user.lastName}</Link>}
+                action={(post.userId === user.data.id) && <UserPostMenu postId={post.id} />}
+                title={<Link to={'/user/' + post.userId}>{fullName}</Link>}
                 subheader={(new Date(post.createdAt)).toLocaleString()}
                 className={'user-post-header'}
             />

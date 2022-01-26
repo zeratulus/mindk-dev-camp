@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import {SignInContainer} from "../../containers/signIn";
 import {SignUpContainer} from "../../containers/signUp";
 import {ProfileContainer} from "../../containers/profile";
-import {AddPostContainer} from "../../containers/addPost";
+import {PostContainer} from "../../containers/post";
 import {FeedContainer} from "../../containers/feed";
 import {ErrorBoundary} from 'react-error-boundary'
 import {ErrorFallback} from "../errorFallback";
@@ -25,7 +25,8 @@ export function AppBody() {
                     <Route path="user/:id" element={<UserContainer />} />
                     <Route path="friends" element={<FriendsContainer />} />
                     <Route path="profile" element={<ProfileContainer />} />
-                    <Route path="addPost" element={<AddPostContainer />} />
+                    <Route path="addPost" element={<PostContainer />} />
+                    <Route path="post/:id/edit" element={<PostContainer />} />
                     <Route path="signin" element={<SignInContainer />} />
                     <Route path="signup" element={<SignUpContainer />} />
                     <Route path="logout" element={<Logout />} />
