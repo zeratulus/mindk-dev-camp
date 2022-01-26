@@ -13,8 +13,6 @@ class PostController {
             return;
         }
         data.id = uuid.v4();
-        data.visibilityId = data.visibilityId;
-
         let post = new Post(data);
         post.save().then((data) => {
             res.status(200).json({success: true, data});
