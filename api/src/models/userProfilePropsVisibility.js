@@ -4,11 +4,9 @@ const {DataTypes} = require('sequelize');
 const UserProfilePropsVisibility = sequelize.define('userProfilePropsVisibility', {
     id: {type: DataTypes.UUID, primaryKey: true},
     userId: {type: DataTypes.UUID},
-    email: {type: DataTypes.INTEGER(2)},
-    phone: {type: DataTypes.INTEGER(2)},
-    university: {type: DataTypes.INTEGER(2)},
+    email: {type: DataTypes.UUID},
+    phone: {type: DataTypes.UUID},
+    university: {type: DataTypes.UUID},
 });
 
-module.exports = {
-    UserProfilePropsVisibility
-}
+module.exports = UserProfilePropsVisibility;

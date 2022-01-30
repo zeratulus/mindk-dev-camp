@@ -12,6 +12,4 @@ const PostCommentary = sequelize.define('postCommentary', {
     paranoid: true,
 });
 
-module.exports = {
-    PostCommentary
-}
+module.exports = PostCommentary;

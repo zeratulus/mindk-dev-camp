@@ -11,6 +11,4 @@ const Post = sequelize.define('post', {
     paranoid: true,
 });
 
-module.exports = {
-    Post
-}
+module.exports = Post;
