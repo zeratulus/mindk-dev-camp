@@ -14,10 +14,18 @@ const User = require("./user");
 User.hasMany(UserUniversity);
 UserUniversity.belongsTo(User);
 University.hasMany(UserUniversity);
-User.hasOne(UserOAuth);
-User.hasOne(UserProfilePropsVisibility);
-User.hasOne(UserLoginAttempts);
-User.hasMany(UserFriends);
+User.hasOne(UserOAuth, {
+    foreignKey: 'userId'
+});
+User.hasOne(UserProfilePropsVisibility, {
+    foreignKey: 'userId'
+});
+User.hasOne(UserLoginAttempts, {
+    foreignKey: 'userId'
+});
+User.hasMany(UserFriends, {
+    foreignKey: 'userId'
+});
 
 Post.hasOne(PostVisibility, {constraints: false});
 Post.belongsTo(User);

@@ -30,7 +30,7 @@ services:
     networks:
       - app-network
     ports:
-      - "80:8888"
+      - "8888:8888"
     volumes:
       - ./api:/home/node/app
     command: [ sh, -c, "cd /home/node/app && npm run dev" ]

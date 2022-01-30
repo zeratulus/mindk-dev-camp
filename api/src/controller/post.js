@@ -1,20 +1,19 @@
 const uuid = require('uuid');
 const Post = require('../models/post');
+const User = require("../models/user");
+const UserProfilePropsVisibility = require("../models/userProfilePropsVisibility");
 const {processError} = require("../utils");
 
 class PostController {
 
     create(req, res) {
-        //TODO: validation rules required: userId, visibilityId, body
-        let content = req.body;
-        if (content.body.length < 10) {
+        let data = req.body;
+        if (data.body.length < 10) {
             res.status(400).json({success: false, message: 'Minimum content length is 10 symbols.'});
             return;
         }
-        content.id = uuid.v4();
-        content.visibilityId = content.userId; //todo: visibility list ids...
-
-        let post = new Post(content);
+        data.id = uuid.v4();
+        let post = new Post(data);
         post.save().then((data) => {
             res.status(200).json({success: true, data});
         }).catch((error) => {
@@ -24,6 +23,24 @@ class PostController {
 
     findById(req, res) {
         Post.findByPk(req.params.id).then((data) => {
+            res.send(data);
+        }).catch((error) => {
+            processError(res, error);
+        });
+    }
+
+    findByUserId(req, res) {
+        const id = req.params.id;
+        Post.findAll({
+            where: {userId: id},
+            include: [{
+                model: User,
+                attributes: ['firstName', 'lastName', 'avatar']
+            }],
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        }).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
@@ -52,7 +69,15 @@ class PostController {
     }
 
     find(req, res) {
-        Post.findAll().then((data) => {
+        Post.findAll({
+            include: [{
+                model: User,
+                attributes: ['firstName', 'lastName', 'avatar']
+            }],
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        }).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
