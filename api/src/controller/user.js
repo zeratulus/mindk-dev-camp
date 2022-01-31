@@ -142,7 +142,13 @@ const UserController = {
         const filePath = path.join(dir, `avatar.png`)
         try {
             if (fs.existsSync(filePath)) {
-                express.static(filePath);
+                res.sendFile(filePath, options, function (err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(`Avatar Sent: ${req.query.id}`);
+                    }
+                });
             }
         } catch(err) {
             console.error(err)
