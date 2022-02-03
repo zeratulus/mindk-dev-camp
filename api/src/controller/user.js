@@ -115,7 +115,7 @@ const UserController = {
     },
 
     uploadAvatar (req, res, next) {
-        const dir = `${ConfigService.app.dirStorage}/uploads/${req.query.id}/`;
+        const dir = `${ConfigService.app.dirStorage}/uploads/${req.params.id}/`;
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir, {recursive: true});
         }
@@ -138,15 +138,15 @@ const UserController = {
     },
 
     getAvatar (req, res) {
-        const dir = `${ConfigService.app.dirStorage}uploads/${req.query.id}/`;
+        const dir = `${ConfigService.app.dirStorage}uploads/${req.params.id}/`;
         const filePath = path.join(dir, `avatar.png`)
         try {
             if (fs.existsSync(filePath)) {
-                res.sendFile(filePath, options, function (err) {
+                res.sendFile(filePath, {}, function (err) {
                     if (err) {
                         console.log(err);
                     } else {
-                        console.log(`Avatar Sent: ${req.query.id}`);
+                        console.log(`Avatar Sent: ${req.params.id}`);
                     }
                 });
             }
