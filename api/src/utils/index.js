@@ -1,6 +1,10 @@
 const url = require("url");
 const config = require("../services/config");
 
+const asyncLogHandler = (fn) => (req, res, next) => {
+    return Promise.resolve(fn(req, res, next)).then(next).catch((e) => next(e));
+}
+
 function log(msg) {
     console.log(`${new Date().toISOString()} -> ${msg}`);
 }
@@ -52,5 +56,6 @@ module.exports = {
     logObj,
     processError,
     getPagination,
-    getUrlFromRequest
+    getUrlFromRequest,
+    asyncLogHandler
 }
