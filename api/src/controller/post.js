@@ -1,7 +1,8 @@
 const uuid = require('uuid');
 const Post = require('../models/post');
+const PostLike = require('../models/postLike');
+const PostCommentary = require('../models/postCommentary');
 const User = require("../models/user");
-const UserProfilePropsVisibility = require("../models/userProfilePropsVisibility");
 const {processError} = require("../utils");
 
 class PostController {
@@ -22,7 +23,27 @@ class PostController {
     }
 
     findById(req, res) {
-        Post.findByPk(req.params.id).then((data) => {
+        Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['firstName', 'lastName', 'avatar']
+                },
+                {
+                    model: PostCommentary,
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['firstName', 'lastName', 'avatar'],
+                        },
+                    ],
+                },
+                {
+                    model: PostLike
+                }
+            ]
+        }
+        ).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
@@ -33,10 +54,24 @@ class PostController {
         const id = req.params.id;
         Post.findAll({
             where: {userId: id},
-            include: [{
-                model: User,
-                attributes: ['firstName', 'lastName', 'avatar']
-            }],
+            include: [
+                {
+                    model: User,
+                    attributes: ['firstName', 'lastName', 'avatar']
+                },
+                {
+                    model: PostCommentary,
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['firstName', 'lastName', 'avatar'],
+                        },
+                    ],
+                },
+                {
+                    model: PostLike
+                }
+            ],
             order: [
                 ['createdAt', 'DESC']
             ]
@@ -70,10 +105,24 @@ class PostController {
 
     find(req, res) {
         Post.findAll({
-            include: [{
-                model: User,
-                attributes: ['firstName', 'lastName', 'avatar']
-            }],
+            include: [
+                {
+                    model: User,
+                    attributes: ['firstName', 'lastName', 'avatar']
+                },
+                {
+                    model: PostCommentary,
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['firstName', 'lastName', 'avatar'],
+                        },
+                    ],
+                },
+                {
+                    model: PostLike
+                }
+            ],
             order: [
                 ['createdAt', 'DESC']
             ]
