@@ -1,10 +1,11 @@
+const express = require('express');
 const uuid = require('uuid');
 const crypto = require('crypto');
 const UserProfilePropsVisibility = require('../models/userProfilePropsVisibility');
 const User = require('../models/user');
-const Post = require("../models/post");
-const {Sequelize} = require("sequelize");
-const {getUrlFromRequest} = require("../utils");
+const fs = require('fs');
+const path = require('path');
+const ConfigService = require('../services/config');
 const {processError} = require("../utils");
 
 const visibleFields = {attributes: ['id', 'firstName', 'lastName', 'email', 'phone', 'seo_alias', 'createdAt']};
@@ -111,8 +112,49 @@ const UserController = {
                 processError(res, error);
             });
         }
-    }
+    },
 
+    uploadAvatar (req, res, next) {
+        const dir = `${ConfigService.app.dirStorage}/uploads/${req.params.id}/`;
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir, {recursive: true});
+        }
+
+        const tempPath = req.file.path;
+        const filename = 'avatar.png';
+        if (path.extname(req.file.originalname).toLowerCase() === ".png") {
+            fs.rename(tempPath, dir + filename, err => {
+                if (err) return res.status(500).json("Oops! Something went wrong!");
+                res.json({
+                    message: 'File uploaded!'
+                });
+            });
+        } else {
+            fs.unlink(tempPath, err => {
+                if (err) return res.status(500).json("Oops! Something went wrong!");
+                res.status(403).json("Only .png files are allowed!");
+            });
+        }
+    },
+
+    getAvatar (req, res) {
+        const dir = `${ConfigService.app.dirStorage}uploads/${req.params.id}/`;
+        const filePath = path.join(dir, `avatar.png`)
+        try {
+            if (fs.existsSync(filePath)) {
+                res.sendFile(filePath, {}, function (err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(`Avatar Sent: ${req.params.id}`);
+                    }
+                });
+            }
+        } catch(err) {
+            console.error(err)
+            res.status(403).json(err.message);
+        }
+    }
 
 }
 

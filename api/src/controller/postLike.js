@@ -1,11 +1,11 @@
 const uuid = require('uuid');
 const PostLike = require('../models/postLike');
+const User = require("../models/user");
 const {processError} = require("../utils");
 
 class PostLikeController {
 
     create(req, res) {
-        //TODO: validation rules required: userId, postId
         let content = req.body;
         content.id = uuid.v4();
 
@@ -18,7 +18,14 @@ class PostLikeController {
     }
 
     findById(req, res) {
-        PostLike.findByPk(req.params.id).then((data) => {
+        PostLike.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['id', 'firstName', 'lastName', 'avatar']
+                }
+            ]
+        }).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
@@ -47,7 +54,20 @@ class PostLikeController {
     }
 
     find(req, res) {
-        PostLike.findAll().then((data) => {
+        let options = {
+            include: [
+                {
+                    model: User,
+                    attributes: ['id', 'firstName', 'lastName', 'avatar']
+                }
+            ]
+        }
+
+        if (req.query.postId) {
+            options.where = {postId: req.query.postId};
+        }
+
+        PostLike.findAll(options).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);

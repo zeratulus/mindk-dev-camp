@@ -2,11 +2,6 @@ const express = require('express');
 const router = express.Router();
 const PostCommentController = require('../controller/postComment');
 
-router.use(function log(req, res, next) {
-    console.log((new Date).toISOString() + ` -> ${req.method}: ${req.url}`);
-    next();
-});
-
 controller = new PostCommentController();
 
 router.post('/', controller.create);
