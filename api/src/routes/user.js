@@ -4,11 +4,6 @@ const upload = multer({dest: '/storage/uploads'})
 const router = express.Router();
 const UserController = require('../controller/user');
 
-router.use(function log(req, res, next) {
-    console.log((new Date).toISOString() + ` -> ${req.method}: ${req.url}`);
-    next();
-});
-
 router.post('/', UserController.create);
 router.get('/', UserController.find);
 router.get('/:id', UserController.findById);
