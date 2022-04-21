@@ -5,12 +5,46 @@ import AxiosService from "../../services/AxiosService";
 import CropperWrapper from "../user/cropperWrapper";
 import {Formik, Form, Field} from 'formik';
 import * as Yup from "yup";
+import FormikAutocomplete from "../controls/formikAutocomplete";
+import {useState} from "react";
+import {useQuery} from "react-query";
 
 export default function ProfileUserForm({user}) {
+    const [universities, setUniversities] = useState([{id: '', title: '--- Select ---'}]);
+
+    const fetchUniversities = async () => {
+        const response = await AxiosService.get(`/university`);
+
+        let options = [];
+
+        for (let i = 0; i < response.data.length; i++) {
+            let item = response.data[i];
+            console.log(item)
+            if (item) {
+                options.push({id: item.id, title: item.title});
+            }
+        }
+        setUniversities(options);
+
+        return response.data;
+    };
+
+    const universityQuery = useQuery('universities', fetchUniversities);
 
     const handleSubmit = (data) => {
         AxiosService.post(`/user/${user.data.id}/profile`, data);
     };
+
+    const fillUniversitiesOptions = () => {
+        let options = [];
+
+        for (let i = 0; i < universityQuery.data.length; i++) {
+            let item = options[i];
+            if (item)
+                options.push({value: item.id, label: item.title});
+        }
+        setUniversities(options);
+    }
 
     const validation = Yup.object({
         email: Yup.string().email().required(),
@@ -18,6 +52,10 @@ export default function ProfileUserForm({user}) {
         firstName: Yup.string().required(),
         lastName: Yup.string().required(),
     });
+
+    // if (universityQuery.isSuccess) {
+    //     fillUniversitiesOptions();
+    // }
 
     return (
         <div>
@@ -71,6 +109,14 @@ export default function ProfileUserForm({user}) {
                             label="Phone number"
                             sx={{mb: '10px'}}
                             fullWidth
+                        />
+
+                        <Field
+                            component={FormikAutocomplete}
+                            id="university"
+                            name="universityId"
+                            label="University"
+                            options={universities}
                         />
 
                         <Button

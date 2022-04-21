@@ -115,26 +115,30 @@ const UserController = {
     },
 
     uploadAvatar (req, res, next) {
-        const dir = `${ConfigService.app.dirStorage}/uploads/${req.params.id}/`;
-        if (!fs.existsSync(dir)) {
-            fs.mkdirSync(dir, {recursive: true});
+        if (uuid.validate(req.params.id)) {
+            const dir = `${ConfigService.app.dirStorage}/uploads/${req.params.id}/`;
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, {recursive: true});
+            }
+
+            const filename = 'avatar.png';
+            const filePath = dir + filename;
+            const tempPath = req.file.path;
+            if (path.extname(req.file.originalname).toLowerCase() === ".png") {
+                fs.rename(tempPath, filePath, err => {
+                    if (err) return res.status(500).json("Oops! Something went wrong!");
+                    res.json({
+                        message: 'File uploaded!'
+                    });
+                });
+            } else {
+                fs.unlink(tempPath, err => {
+                    if (err) return res.status(500).json("Oops! Something went wrong!");
+                    res.status(403).json("Only .png files are allowed!");
+                });
+            }
         }
 
-        const tempPath = req.file.path;
-        const filename = 'avatar.png';
-        if (path.extname(req.file.originalname).toLowerCase() === ".png") {
-            fs.rename(tempPath, dir + filename, err => {
-                if (err) return res.status(500).json("Oops! Something went wrong!");
-                res.json({
-                    message: 'File uploaded!'
-                });
-            });
-        } else {
-            fs.unlink(tempPath, err => {
-                if (err) return res.status(500).json("Oops! Something went wrong!");
-                res.status(403).json("Only .png files are allowed!");
-            });
-        }
     },
 
     getAvatar (req, res) {

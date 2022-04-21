@@ -11,6 +11,9 @@ import {Select} from 'formik-mui';
 import * as Yup from 'yup';
 import AxiosService from "../../services/AxiosService";
 import {useNavigate} from "react-router-dom";
+import {Fab, Tooltip} from "@mui/material";
+import UploadFileIcon from '@mui/icons-material/UploadFile';
+import SendIcon from '@mui/icons-material/Send';
 
 export function Post({editorRef, post, userId, isAdd}) {
     const navigation = useNavigate();
@@ -82,12 +85,29 @@ export function Post({editorRef, post, userId, isAdd}) {
                             name={'body'}
                         />
 
-                        <Button
-                            type={'submit'}
-                            fullWidth
-                            variant="contained"
-                            sx={{mt: 3, mb: 2}}
-                        >Publish</Button>
+                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                            <Tooltip title="Upload Post Photo">
+                                <label htmlFor="photo">
+                                    <Field
+                                        style={{ display: 'none' }}
+                                        id="photo"
+                                        name="photo"
+                                        type="file"
+                                        accept="image/.jpg,.jpeg,.png"
+                                    />
+                                    <Fab color="success" size="small" component="span" aria-label="add">
+                                        <UploadFileIcon/>
+                                    </Fab>
+                                </label>
+                            </Tooltip>
+
+                            <Button
+                                color="primary"
+                                type={'submit'}
+                                variant="contained"
+                                sx={{mt: 3, mb: 2}}
+                            ><SendIcon/> Publish</Button>
+                        </div>
                     </Form>)
                 }
             </Formik>

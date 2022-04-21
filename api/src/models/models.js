@@ -6,6 +6,7 @@ const UserFriends = require("./userFriends");
 const University = require("./university");
 const PostVisibility = require("./postVisibility");
 const PostCommentary = require("./postCommentary");
+const PostImage = require("./postImage");
 const Post = require("./post");
 const PostLike = require("./postLike");
 const User = require("./user");
@@ -30,6 +31,9 @@ UserFriends.hasOne(User, {
     sourceKey: 'friendId'
 })
 
+Post.hasMany(PostImage, {
+    foreignKey: 'postId'
+});
 Post.hasOne(PostVisibility, {constraints: false});
 Post.belongsTo(User);
 Post.hasMany(PostLike, {
@@ -47,6 +51,7 @@ PostCommentary.hasMany(PostCommentary, {
 
 module.exports = {
     Post,
+    PostImage,
     PostCommentary,
     PostLike,
     PostVisibility,

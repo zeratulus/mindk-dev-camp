@@ -1,13 +1,13 @@
 const sequelize = require('../services/db');
 const {DataTypes} = require('sequelize');
 
-const PostLike = sequelize.define('postLike', {
+const postImage = sequelize.define('postImage', {
     id: {type: DataTypes.UUID, primaryKey: true},
-    userId: {type: DataTypes.UUID},
-    postId: {type: DataTypes.UUID}
+    postId: {type: DataTypes.UUID},
+    image: {type: DataTypes.TEXT},
 }, {
     timestamps: true,
     paranoid: true,
 });
 
-module.exports = PostLike;
+module.exports = postImage;

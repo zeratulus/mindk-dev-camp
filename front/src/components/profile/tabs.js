@@ -6,10 +6,17 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import ProfileUserForm from "./userForm";
 import {useUser} from "../../hooks/user";
+import ProfileVisibilityForm from "./visibilityForm";
+import {PV_PUBLIC} from "../../utils";
 
 export default function ProfileTabs() {
     const [user, setUser] = useUser();
     const [tabId, setTabId] = React.useState('1');
+    const [userVisibilities, setUserVisibilities] = React.useState({
+        email: PV_PUBLIC.id,
+        phone: PV_PUBLIC.id,
+        university: PV_PUBLIC.id,
+    });
 
     const handleTabChange = (event, newValue) => {
         setTabId(newValue);
@@ -28,7 +35,9 @@ export default function ProfileTabs() {
                 <TabPanel value="1">
                     <ProfileUserForm user={user} />
                 </TabPanel>
-                <TabPanel value="2">Item Two</TabPanel>
+                <TabPanel value="2">
+                    <ProfileVisibilityForm userVisibilities={userVisibilities}/>
+                </TabPanel>
                 <TabPanel value="3">Item Three</TabPanel>
             </TabContext>
         </Box>

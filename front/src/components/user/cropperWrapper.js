@@ -7,8 +7,10 @@ import Typography from "@mui/material/Typography";
 import "cropperjs/dist/cropper.css";
 import Container from "@mui/material/Container";
 import AxiosService from "../../services/AxiosService";
+import {getUserFromStorage} from "../../utils";
 
-export default function CropperWrapper({userId}) {
+export default function CropperWrapper() {
+    const user = getUserFromStorage();
     const [open, setOpen] = React.useState(false);
     const [file, setFile] = React.useState(false);
     const [pseudoUrl, setPseudoUrl] = React.useState(false);
@@ -16,18 +18,18 @@ export default function CropperWrapper({userId}) {
     const handleModalClose = () => setOpen(false);
     const cropperRef = React.createRef();
 
-    const onCrop = () => {
+    const save = () => {
         const imageElement = cropperRef?.current;
         const cropper = imageElement?.cropper;
         const result = cropper.getCroppedCanvas().toDataURL();
 
-        AxiosService.post(`/user/${userId}/avatar`, {
-            avatar: result
-        });
-    };
+        let formData = new FormData();
+        formData.append('avatar', result);
 
-    const save = () => {
-        onCrop();
+        AxiosService.post(`/user/${user.data.id}/avatar`, formData).then((response) => {
+            handleModalClose();
+        });
+
         handleModalClose();
     }
 
@@ -86,13 +88,10 @@ export default function CropperWrapper({userId}) {
                                 style={{height: 'auto', width: "100%"}}
                                 // Cropper.js options
                                 initialAspectRatio={16 / 9}
-                                minCropBoxHeight={220}
-                                minCropBoxWidth={220}
+                                minCropBoxHeight={180}
+                                minCropBoxWidth={180}
                                 guides={true}
-                                crop={onCrop}
                                 ref={cropperRef}
-                                zoomable={true}
-                                scalable={true}
                                 showZoomer={true}
                             />
                         </div>

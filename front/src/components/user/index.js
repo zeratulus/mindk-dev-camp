@@ -36,15 +36,6 @@ function User() {
 
     const {isLoading, isFetching, isError, data, error} = useQuery('friend', fetchUser);
 
-    React.useEffect(() => {
-        // AxiosService.get(`/post/${params.id}/user`).then((data) => {
-        //     console.log(data);
-        //     setPosts(data.data);
-        //     return data.data;
-        // });
-        console.log('useEffect');
-    });
-
     if (isFetching) {
         return (
             <Box sx={{display: 'flex'}}>
