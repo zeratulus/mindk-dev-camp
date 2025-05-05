@@ -6,9 +6,11 @@ const UserFriends = require("./userFriends");
 const University = require("./university");
 const PostVisibility = require("./postVisibility");
 const PostCommentary = require("./postCommentary");
+const PostImage = require("./postImage");
 const Post = require("./post");
 const PostLike = require("./postLike");
 const User = require("./user");
+const Log = require("./log");
 
 /* Relations */
 User.hasMany(UserUniversity);
@@ -23,15 +25,24 @@ User.hasOne(UserProfilePropsVisibility, {
 User.hasOne(UserLoginAttempts, {
     foreignKey: 'userId'
 });
-User.hasMany(UserFriends, {
-    foreignKey: 'userId'
-});
 
+UserFriends.hasOne(User, {
+    foreignKey: 'id',
+    sourceKey: 'friendId'
+})
+
+Post.hasMany(PostImage, {
+    foreignKey: 'postId'
+});
 Post.hasOne(PostVisibility, {constraints: false});
 Post.belongsTo(User);
-Post.hasMany(PostLike);
+Post.hasMany(PostLike, {
+    foreignKey: 'postId'
+});
 PostLike.belongsTo(User);
-Post.hasMany(PostCommentary);
+Post.hasMany(PostCommentary, {
+    foreignKey: 'postId'
+});
 PostCommentary.belongsTo(User);
 PostCommentary.hasMany(PostCommentary, {
     foreignKey: 'replyId'
@@ -40,6 +51,7 @@ PostCommentary.hasMany(PostCommentary, {
 
 module.exports = {
     Post,
+    PostImage,
     PostCommentary,
     PostLike,
     PostVisibility,
@@ -49,5 +61,6 @@ module.exports = {
     UserLoginAttempts,
     UserOAuth,
     UserProfilePropsVisibility,
-    UserUniversity
+    UserUniversity,
+    Log
 }

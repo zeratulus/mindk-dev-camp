@@ -1,0 +1,735 @@
+Белоцерковский национальный аграрный университет
+Білоцерківський національний аграрний університет
+Bilotserkivskyi National Agrarian University 
+http://www.btsau.kiev.ua UA, RU
+2 ВГУЗ Украины «Буковинский государственный медицинский университет»
+ВДНЗ України «Буковинський державний медичний університет»
+Bukovinian State Medical University
+http://www.bsmu.edu.ua/ UA, RU, EN
+3 Винницкий национальный аграрный университет
+Вінницький національний аграрний університет
+Vinnytsia National Agrarian University
+http://www.vsau.edu.ua UA, RU
+4 Винницкий национальный медицинский университет имени Н. И. Пирогова
+Вінницький національний медичний університет імені М. І. Пирогова
+National Pirogov Memorial Medical University, Vinnytsia
+http://www.vnmu.edu.ua/ UA, RU, EN
+5 Винницкий национальный технический университет
+Вінницький національний технічний університет
+Vinnytsia National Technical University
+http://vntu.edu.ua/en.html UA, RU
+6 Восточноевропейский национальный университет имени Л. Украинки
+Східноєвропейський національний університет імені Лесі Українки
+Lesya Ukrainka Eastern European National University
+http://eenu.edu.ua/ru UA, EN
+7 Высшее государственное учебное заведение Украины "Украинская медицинская стоматологическая академия"
+Вищий державний навчальний заклад України "Українська медична стоматологічна академія"
+Higher Education Institution "Ukrainian Medical Stomatological Academy" http://www.umsa.edu.ua/ RU, EN
+Ministry of Education and Science of Ukraine
+Ukrainian State Center for International Education
+8 Высшее учебное заведение "Украинский Католический Университет"
+Вищий навчальний заклад "Український Католицький Університет"
+Higher Educational Institution "Ukrainian Catholic University"
+http://ucu.edu.ua/ UA, RU
+9 Высшее учебное заведение Киевский городской медицинский колледж
+Вищий навчальний заклад Київський міський медичний коледж
+Higher Educational Institution "The Kiev Medical College"
+http://kmmk.net.ua/ UA
+10 ГВУЗ «Приднепровская государственная академия строительства и архитектуры»
+Державний вищий навчальний заклад "Придніпровська державна академія будівництва та архітектури"
+SHEI "Prydniprovs'ka State Academy of Civil Engineering and Architecture"
+www.pgasa.dp.ua UA, EN, FR
+11 ГЗ «Луганский национальный университет имени Тараса Шевченка»
+Державний заклад "Луганський національний університет імені Тараса Шевченка"
+Luhansk Taras Shevchenko National University
+http://luguniv.edu.ua/ UA, RU
+12 Государственное высшее учебное заведение "Ивано-Франковский национальный медицинский университет"
+Державний вищий навчальний заклад "Івано-Франківський національний медичний університет"
+State Higher Educational institution "Ivano-Frankivsk National Medical University"
+http://www.ifnmu.edu.ua/ UA, RU, EN
+13 Государственное высшее учебное заведение "Одесское мореходное училище рыбной промышленности имени
+Алексея Соляника"
+Державний вищий навчальний заклад "Одеське морехідне училище рибної промисловості імені Олексія
+Соляника"
+Odesa Maritime College of fish industry named after O. Solyanyk
+http://omurp.org.ua/ua/ UA, RU
+14 Государственное высшее учебное заведение "Приазовский государственный технический университет"
+Державний вищий навчальний заклад "Приазовський державний технічний університет"
+State Higher Educational Institution "Azov State Technical University"
+http://www.pstu.edu/ UA, RU
+15 Государственное высшее учебное заведение "Тернопольский государственный медицинский университет имени
+И. Я. Горбачевского" МОЗ Украины
+Державний вищий навчальний заклад "Тернопiльський державний медичний університет iменi I. Я.
+Горбачевського" МЗ України
+I.Horbachevsky Ternopil State Medical University
+http://www.tdmu.edu.ua/ UA, RU, EN
+16 Государственное высшее учебное заведение "Университет менеджмента образования"
+Державний вищий навчальний заклад "Університет менеджменту освіти"
+State Higher Educational Institution "University Education Management"
+http://umo.edu.ua/ UA, RU
+17 Государственное высшее учебное заведение "Харьковский колледж текстиля и дизайна"
+Державний вищий навчальний заклад "Харківський коледж текстилю та дизайну"
+State Higher Educational Institution "Kharkiv College of textiles and design"
+http://xtt.kharkov.ua/ UA, RU
+18 Государственное высшее учебное заведение «Запорожский национальный университет»
+Державний вищий навчальний заклад "Запорізький національний університет" Міністерства освіти і науки
+України
+State Higher Educational Institution "Zaporizhzhia National University"
+www.znu.edu.ua UA, RU
+19 Государственное высшее учебное заведение «Криворожский национальный университет»
+Державний вищий навчальний заклад "Криворізький національний університет"
+State Higher Educational Institution "Kryvyi Rih National University"
+knu.edu.ua UA, RU
+20 Государственное высшее учебное заведение «Национальный горный университет»
+Державний вищий навчальний заклад "Національний гірничий університет"
+State Higher Educational Institution "National Mining University"
+http://www.nmu.org.ua UA, RU
+21 Государственное высшее учебное заведение «Национальный лесотехнический университет Украины»
+Державний вищий навчальний заклад "Національний лісотехнічний університет України"
+State Higher Educational Institution "National Forestry University of Ukraine"
+www.nltu.edu.ua UA
+22 Государственное высшее учебное заведение «Ужгородский национальный университет»
+Державний вищий навчальний заклад "Ужгородський національний університет"
+State Higher Educational institution "Uzhhorod National University"
+http://www.univ.uzhgorod.ua UA, EN
+23 Государственное высшее учебное заведение «Украинский государственный химико-технологический
+университет»
+Державний вищий навчальний заклад "Український державний хіміко-технологічний університет"
+State Higher Educational institution "Ukrainian State University of Chemical Technology"
+www.udhtu.com.ua UA, RU
+24 Государственное высшее учебное заведение «Университет банковского дела»
+ДВНЗ «Університет банківської справи»
+State Higher Educational Institution «University of Banking »
+www.ubs.gov.ua UA
+25 Государственное заведение "Днепропетровская медицинская академия Министерства здравоохранения
+Украины"
+Державний заклад "Дніпропетровська медична академія Міністерства охорони здоров'я України"
+State Establishment "Dnipropetrovsk Medical Academy of Health Ministry of Ukraine"
+http://www.dsma.dp.ua/ UA, RU, EN
+26 Государственное заведение "Запорожская медицинская академия последипломного образования Министерства
+здравоохранения Украины"
+Державний заклад "Запорізька медична академія післядипломної освіти Міністерства охорони здоров'я України"
+State Institution “Zaporizhzhia Medical Academy of Post-Graduate Education Ministry of Health of Ukraine”
+http://zmapo.edu.ua/ UA, RU
+27 Государственное заведение "Киевский колледж связи"
+Державний заклад "Київський коледж зв'язку"
+State Educational Institution "Kyiv College of Communication"
+http://kkz.net.ua/ UA, RU, EN
+28 Государственное заведение "Луганский государственный медицинский университет"
+Державний заклад "Луганський державний медичний університет"
+Luhansk State Medical University
+http://www.lsmu.edu.ua/ UA, RU
+29 Государственное учреждение "Институт глазных болезней и тканевой терапии имени В. П. Филатова
+Национальной академии медицинских наук Украины"
+Державна установа "Інститут очних хвороб і тканинної терапії імені В. П. Філатова Національної академії
+медичних наук України"
+The Filatov Institute of Eye Diseases and Tissue Therapy of The National Academy of Medical Sciences of Ukraine
+http://institut-filatova.com.ua/ UA, RU
+30 Государственное учреждение "Институт нейрохирургии имени академика А. П. Ромоданова Национальной
+академии медицинских наук Украины"
+Державна установа "Інститут нейрохірургії імені академіка А. П. Ромоданова Національної академії медичних
+наук України"
+The State Institution "Institute of Neurosurgery named after acad. A.P.Romodanov of NAMS of Ukraine"
+http://www.neuro.kiev.ua/ UA, RU
+31 Государственный университет телекоммуникаций
+Державний університет телекомунікацій
+State University of Telecommunications
+http://foreign.dut.edu.ua/ UA, RU
+32 Дипломатическая академия Украины при Министерстве иностранных дел
+Дипломатична академія України при Міністерстві закордонних справ
+Diplomatic Academy of Ukraine, the Ministry of Foreign Affairs of Ukraine
+http://dipacadem.kiev.ua/ UA, RU
+33 Днепродзержинский государственный технический университет
+Дніпродзержинський державний технічний університет
+Dniprodzerzhynsk State Technical University
+http://www.dstu.dp.ua/ UA, RU
+34 Днепропетровский государственный аграрно-экономический университет
+Дніпропетровський державний аграрно-економічний університет
+Dnipropetrovsk State Agrarian and Economic University
+http://www.dsau.dp.ua UA, RU
+35 Днепропетровский государственный институт физической культуры и спорта
+Дніпропетровський державний інститут фізичної культури і спорту
+Dnipropetrovsk State Institute of Physical Culture and Sports
+http://infiz.dp.ua/ UA, RU
+36 Днепропетровский национальный университет железнодорожного транспорта имени академика
+В. Лазаряна
+Дніпропетровський національний університет залізничного транспорту імені академіка В. Лазаряна
+Dnipropetrovsk National University of Railway Transport named after Academician V. Lazaryan
+http://www.diit.edu.ua UA, RU
+37 Днепропетровский национальный университет имени Олеся Гончара
+Дніпропетровський національний університет імені Олеся Гончара
+Oles Honchar Dnipropetrovsk National University
+www.dnu.dp.ua UA, RU, EN
+38 Донбасский государственный технический университет
+Донбаський державний технічний університет
+Donbas State Technical University http://dondtu.edu.ua/ua/ UA, RU
+39 Донецкий национальный университет
+Донецький національний університет
+Donetsk National University
+http://www.donnu.edu.ua/ UA, RU, EN,
+DE, FR
+40 Дочернее предприятие "Киевский хореографический колледж"
+Дочірнє підприємство "Київський хореографічний коледж"
+Subsidiary Enterprise "Kyiv Choreographic College" http://balletkiev.com/ UA, RU
+41 Житомирский военный институт имени С. П.Корольова Государственного университета телекоммуникаций
+Житомирський військовий інститут імені С. П.Корольова Державного університету телекомунікацій
+Zhytomyr Military Institute of S. P. Korolev of the State University of Telecommunications
+http://www.zvir.zt.ua/ UA, RU
+42 Житомирский государственный технологический университет
+Житомирський державний технологічний університет
+Zhytomyr State Technological University
+www.ztu.edu.ua UA, RU, EN
+43 Житомирский государственный университет имени Ивана Франко
+Житомирський державний університет імені Івана Франка
+Zhytomyr Ivan Franko State University
+http://zu.edu.ua/ UA, RU, EN,
+DE
+44 Запорожская государственная инженерная академия
+Запорізька державна інженерна академія
+Zaporizhzhia State Engineering Academy
+www.zgia.zp.ua UA, RU
+45 Запорожский государственный медицинский университет
+Запорізький державний медичний університет
+Zaporizhzhia State Medical University
+http://zsmu.edu.ua/ RU, EN
+46 Запорожский национальный технический университет
+Запорізький національний технічний університет
+Zaporizhzhia National Technical University zntu.edu.ua UA
+47 Ивано-Франковский национальный технический университет нефти и газа
+Івано-Франківський національний технічний університет нафти і газу
+Ivano-Frankivsk National Technical University of Oil and Gas www.nung.edu.ua UA, EN
+48 Измаильский государственный гуманитарный университет
+Ізмаїльський державний гуманітарний університет
+Izmail State University for the Humanities http://www.idgu.edu.ua/ UA, RU
+49 Институт пожарной безопасности имени Героев Чернобыля Национального университета гражданской защиты
+Інститут пожежної безпеки імені Героїв Чорнобиля Національного університету цивільного захисту
+Institute of Fire Safety named after the Heroes of Chornobyl
+http://fire.ck.ua/ UA, RU
+50 Киевская государственная академия водного транспорта имени гетмана Петра Конашевича-Сагайдачного
+Київська державна академія водного транспорту імені гетьмана Петра Конашевича-Сагайдачного
+Kyiv State Academy of Water Transport named after Hetman Petro Konashevych-Sahaydachniy www.maritime.kiev.ua UA, RU
+51 Киевский государственный институт декоративно-прикладного искусства и дизайна имени Михаила Бойчука
+Київський державний інститут декоративно-прикладного мистецтва і дизайну імені Михайла Бойчука
+Kyiv State Institute of Decorative and Applied Art and Design named after Mykhaylo Boychuk www.boychukart.kiev.ua UA, RU
+52 Киевский институт музыки имени Р. М. Глиэра
+Київський інститут музики імені Р. М. Глієра
+R.Glier Kyiv Institute of Music
+http://glierinstitute.org/ UA, RU
+53 Киевский коледж строительства, архитектуры и дизайна
+Київський коледж будівництва, архітектури та дизайну
+Kyiv College of Construction, Architecture and Design
+http://kkbad.com.ua/ UA, RU
+54 Киевский национальный лингвистический университет
+Київський національний лінгвістичний університет
+Kyiv National Linguistic University
+http://www.knlu.kiev.ua UA, RU
+55 Киевский национальный торгово-экономический университет
+Київський національний торговельно-економічний університет
+Kyiv National University of Trade and Economics
+https://www.knteu.kiev.ua/?en UA, RU
+56 Киевский национальный университет имени Тараса Шевченка
+Київський національний університет імені Тараса Шевченка
+Taras Shevchenko National University of Kyiv
+http://www.univ.kiev.ua/ UA, RU, EN
+57 Киевский национальный университет строительства и архитектуры
+Київський національний університет будівництва і архітектури
+Kyiv National University of Construction and Architecture
+http://www.knuba.edu.ua UA, RU
+58 Киевский национальный университет театра, кино и телевидения имени И. К. Карпенко-Карого
+Київський національний університет театру, кіно і телебачення імені І. К. Карпенка-Карого
+Kyiv National I. K. Karpenko-Kary Theatre, Cinema and Television University
+http://knutkt.com.ua/ UA
+59 Киевский национальный университет технологий и дизайна
+Київський національний університет технологій та дизайну
+Kyiv National University of Technologies and Design
+www.knutd.com.ua UA, RU
+60 Киевский национальный экономический университет имени Вадима Гетьмана
+Київський національний економічний університет імені Вадима Гетьмана
+Kyiv National Economic University named after Vadym Hetman
+http://kneu.edu.ua/ UA
+61 Киевский университет имени Бориса Гринченко
+Київський університет імені Бориса Грінченка
+Borys Grinchenko Kyiv University http://kubg.edu.ua/ UA
+62 Кировоградская лётная академия Национального авиационного университета
+Кіровоградська льотна академія Національного авіаційного університету
+Kirovohrad Flight Academy of the National Aviation University
+http://glau.kr.ua/index.php/ru/ UA, RU
+63 Кировоградский национальный технический университет
+Кіровоградський національний технічний університет
+Kirovohrad National Technical University
+http: www.kntu.kr.ua UA, RU
+64 Коммунальное учреждение здравоохранения «Харьковский медицинский колледж №1»
+Комунальний заклад охорони з
+доров’я «Харківський медичний коледж №1»
+Municipal Health Care Facility "Kharkiv Medical College №1"
+http://hbmk.org.ua/ UA, RU
+65 Коммунальное учреждение здравоохранения «Харьковский медицинский колледж №2
+»
+Комунальний заклад охорони здоров'я
+«Харківський медичний коледж №2
+»
+Municipal Health Care Facility "Kharkiv Medical College №
+2
+"
+http://xn--d1aabbgvhev.xn--
+j1amh/main UA, RU
+66 Кременчугский лётный колледж Национального авиационного университета
+Кременчуцький льотний коледж Національного авіаційного університету
+Kremenchuk Flight College of National Aviation University
+www.flightcollege.com.ua UA, RU, EN
+67 Кременчугский национальный университет имени Михаила Остроградского
+Кременчуцький національний університет імені Михайла Остроградського
+Kremenchuk Mykhailo Ostrohradskyi National University
+www.kdu.edu.ua UA, RU
+68 Криворожский колледж Национального авиационного университета
+Криворізький коледж Національного авіаційного університету
+Kryvorizhskyi College of National Aviation University
+http://kk.nau.edu.ua/ UA, RU
+69 Луганский национальный аграрный университет
+Луганський національний аграрний університет
+Luhansk National Agrarian University
+http://lnau.in.ua/ UA, RU
+70 Луцкий национальный технический университет
+Луцький національний технічний університет
+Lutsk National Technical University
+http://lutsk
+-ntu.com.ua/en UA
+71 Львовская национальная академия искусств
+Львівська національна академія мистецтв
+Lviv National Academy of Arts
+http://www
+.lnam
+.edu
+.ua/ UA
+72 Львовская национальная музыкальная академия имени Н. В. Лысенко
+Львівська національна музична академія імені М. В. Лисенка
+The Mykola Lysenko Lviv National Music Academy
+http://conservatory.lviv.ua/ UA, RU
+73 Львовский государственный университет безопасности жизнедеятельности
+Львівський державний університет безпеки життєдіяльності
+Lviv State University of Life Safety
+http://www.ldubgd.edu.ua/ UA, RU
+74 Львовский государственный университет физической культуры
+Львівський державний університет фізичної культури
+Lviv State University of Physical Culture
+http://www
+.ldufk
+.edu
+.ua/ UA
+75 Львовский национальный медицинский университет имени Данила Галицкого
+Львівський національний медичний університет імені Данила Галицького
+Danylo Halytsky Lviv National Medical University http://www.meduniv.lviv.ua/ UA, RU, EN
+76 Львовский национальный университет ветеринарной медицины и биотехнологий имени С. З. Гжицкого
+Львівський національний університет ветеринарної медицини та біотехнологій імені С. З. Гжицького
+Lviv National University of Veterinary Medicine and Biotechnology named after S.Z. Gzhytsky
+http://www.vetuniver.lviv.ua/ UA
+77 Львовский национальный университет имени Ивана Франко
+Львівський національний університет імені Івана Франка
+Ivan Franko Lviv National University
+http://lnu.edu.ua UA
+78 Львовский учебно-научный институт ГВУЗ «Университет банковского дела»
+Львівський навчально-науковий інститут ДВНЗ «Університет банківської справи»
+State Higher Educational Institution «Banking University»
+http://www.libs.ubs.edu.ua/ UA, EN
+79 Мариупольский государственный университет
+Маріупольський державний університет
+Mariupol State University
+http://mdu.in.ua/ UA, RU
+80 Национальная академия внутренних дел
+Національна академія внутрішніх справ
+National Academy of Internal Affairs
+http://www.naiau.kiev.ua/ UA, RU
+81 Национальная академия изобразительного искусства и архитектуры
+Національна академія образотворчого мистецтва і архітектури
+The National Academy of Fine Art and Architecture
+http://naoma.edu.ua/ua/news/ UA, RU
+82 Национальная медицинская академия последипломного образования имени П. Л. Шупика
+Національна медична академія післядипломної освіти імені П. Л. Шупика
+Shupyk National Medical Academy of Postgraduate Education
+http://nmapo.edu.ua/ UA, RU
+83 Национальная металлургическая академия Украины
+Національна металургійна академія України
+National Metallurgical Academy of Ukraine
+http://www.nmetau.edu.ua UA, RU, EN
+84 Национальная музыкальная академия Украины имени П. И. Чайковского
+Національна музична академія України імені П. І. Чайковського
+The Ukrainian National Tchaikovsky Academy of Music
+http://knmau.com.ua/ UA, RU
+85 Национальный авиационный университет
+Національний авіаційний університет
+National Aviation University
+http://www.nau.edu.ua UA, RU, EN
+86 Национальный аэрокосмический университет имени Н. Е. Жуковского «Харьковский авиационный институт»
+Національний аерокосмічний університет імені М. Є. Жуковського "Харківський авіаційний інститут"
+National Aerospace University named after Zhukovsky "Kharkiv Aviation Institute"
+http://www.khai.edu UA, RU, EN
+87 Национальный медицинский университет имени А. А. Богомольца
+Національний медичний університет імені О. О. Богомольця
+Bogomolets National Medical University http://www.nmu.edu.ua/ UA, RU
+88 Национальный педагогический университет имени М. П. Драгоманова
+Національний педагогічний університет імені М. П. Драгоманова
+National Pedagogical Dragomanov University
+http://www.npu.edu.ua UA
+89 Национальный технический университет «Харьковский политехнический институт»
+Національний технічний університет "Харківський політехнічний інститут"
+National Technical University "Kharkiv Polytechnic Institute"
+http://www.kpi.kharkov.ua/ UA, RU, EN
+90 Национальный технический университет Украины «Киевский политехнический институт»
+Національний технічний університет України "Київський політехнічний інститут"
+National Technical University of Ukraine "Kyiv Polytechnic Institute"
+www.ntu-kpi.kiev.ua UA, RU, EN
+91 Национальный транспортный университет
+Національний транспортний університет
+National Transport University
+http://www.ntu.edu.ua UA, RU
+92 Национальный университет «Киево-Могилянская академия"
+Національний університет "Києво-Могилянська академія"
+National University of "Kyiv-Mohyla Academy"
+http://www.ukma.edu.ua UA
+93 Национальный университет «Львовская политехника»
+Національний університет "Львівська політехніка"
+National University "Lviv Polytechnic"
+http://www.lp.edu.ua UA
+94 Национальный университет «Одесская морская академия»
+Національний університет "Одеська морська академія"
+National University "Odessa Maritime Academy"
+http://www.onma.edu.ua/ UA, RU
+95 Национальный университет «Одесская юридическая академия»
+Національний університет "Одеська юридична академія"
+National University "Odesa Law Academy"
+http://onua.edu.ua/ UA, RU
+96 Национальный университет «Острожская академия»
+Національний університет "Острозька академія"
+The National University of Ostroh Academy
+http://www.oa.edu.ua UA
+97 Национальный университет биоресурсов и природопользования Украины
+Національний університет біоресурсів і природокористування України (базовий заклад, м. Київ)
+National University of Life and Environmental Sciences of Ukraine http://www.nubip.edu.ua/ UA, RU, EN
+98 Национальный университет водного хозяйства и природопользования
+Національний університет водного господарства та природокористування
+National University of Water Management and Nature Resources Use
+http://nuwm.edu.ua/ UA, RU
+99 Национальный университет гражданской защиты Украины
+Національний університет цивільного захисту України
+National University of Civil Protection of Ukraine
+http://nuczu.edu.ua/ukr/ UA, RU
+100 Национальный университет кораблестроения имени адмирала Макарова
+Національний університет кораблебудування імені адмірала Макарова
+National University of Shipbuilding named after admiral Makarov
+http://www
+.nuos
+.edu
+.ua/ UA, RU, EN
+101 Национальный университет пищевых технологий
+Національний університет харчових технологій
+National University of Food Technologies
+www.nuft.edu.ua UA
+102 Национальный университет физического воспитания и спорта Украины
+Національний університет фізичного виховання і спорту України
+National University of Physical Education and Sport of Ukraine
+www
+.uni
+-sport
+.edu
+.
+u
+а UA, RU
+103 Национальный фармацевтический университет
+Національний фармацевтичний університет
+National University of Pharmacy
+http://nuph.edu.ua/ RU, EN
+104 Национальный юридический университет имени Ярослава Мудрого
+Національний юридичний університет імені Ярослава Мудрого
+Yaroslav Mudryi National Law University
+http://www
+.jur
+-academy
+.kharkov
+.ua
+/ UA
+105 Николаевский национальный аграрный университет
+Миколаївський національний аграрний університет
+Mykolayiv National Agrarian University
+www.mdau.mk.ua UA, RU
+106 Николаевский национальный университет имени В. А. Сухомлинского
+Миколаївський національний університет імені В. О. Сухомлинського
+Mykolayiv National University named after V. Sukhomlynskyi
+www.mdu.edu.ua UA, RU
+107 Одесская государственная академия строительства и архитектуры
+Одеська державна академія будівництва та архітектури
+Odesa State Academy of Civil Engineering and Architecture
+www.ogasa.org.ua UA, RU
+108 Одесская государственная академия технического регулирования и качества
+Одеська державна академія технічного регулювання та якості
+Odesa State Academy of Technical Regulation and Quality
+www.kachestvo.od.ua UA, RU
+109 Одесская национальная академия пищевых технологий
+Одеська національна академія харчових технологій
+Odesa National Academy of Food Technologies
+www.onaft.edu.ua UA, RU
+110 Одесская национальная академия связи имени А. С. Попова
+Одеська національна академія зв'язку імені О. С. Попова
+Odesa National Academy of Telecommunications named after
+О. S. Popov
+https://www.onat.edu.ua/ UA, RU, EN
+111 Одесская национальная музыкальная академия имени А. В. Неждановой
+Одеська національна музична академія імені А. В. Нежданової
+Odesa National Music Academy named after A. V. Nezhdanova http://odma.edu.ua/ RU
+112 Одесский государственный аграрный университет
+Одеський державний аграрний університет
+Odesa State Agrarian University
+osau.edu.ua UA
+113 Одесский государственный экологический университет
+Одеський державний екологічний університет
+Odesa State Ecological University
+www.odeku.edu.ua UA
+114 Одесский национальный медицинский университет
+Одеський національний медичний університет
+Odesa National Medical University
+http://odmu.edu.ua/ UA, RU
+115 Одесский национальный морской университет
+Одеський національний морський університет
+Odessa National Maritime University
+www.onmu.odessa.ua UA, RU
+116 Одесский национальный политехнический университет
+Одеський національний політехнічний університет
+Odesa National Polytechnic University
+www.opu.ua UA, RU
+117 Одесский национальный университет имени И. И. Мечникова
+Одеський національний університет імені І. І. Мечникова
+Odesa I. I. Mechnikov National University
+www.onu.edu.ua UA, RU
+118 Одесский национальный экономический университет
+Одеський національний економічний університет
+Odesa National Economic University
+http://oseu.edu.ua UA, RU
+119 Полтавская государственная аграрная академия
+Полтавська державна аграрна академія
+Poltava State Agrarian Academy
+http://www.pdaa.edu.ua UA, RU, EN
+120 Полтавский национальный технический университет имени Юрия Кондратюка
+Полтавський національний технічний університет імені Юрія Кондратюка
+Poltava National Technical Yuri Kondratyuk University http://pntu
+.edu
+.ua
+/en/ UA, RU, EN
+121 Прикарпатский национальный университет имени Василия Стефаника
+Прикарпатський національний університет імені Василя Стефаника
+Vasyl Stefanyk Precarpathian National University
+www.pu.if.ua UA, EN
+122 Ровненский государственный гуманитарный университет
+Рівненський державний гуманітарний університет
+Rivne State University of Humanities
+www.rshu.edu.ua UA
+123 Сумской государственный педагогический университет имени А. С. Макаренка
+Сумський державний педагогічний університет імені А. С. Макаренка
+A. Makarenko Sumy State Pedagogical University
+http://www.sspu.sumy.ua/ UA
+124 Сумской государственный университет
+Сумський державний університет
+Sumy State University
+www.sumdu.edu.ua UA, RU, EN
+125 Сумской национальный аграрный университет
+Сумський національний аграрний університет
+Sumy National Agrarian University www.sau.sumy.ua UA, RU, EN
+126 Таврический государственный агротехнологический университет
+Таврійський державний агротехнологічний університет
+Tavria State Agrotechnological University
+http://www.tsatu.edu.ua UA, RU
+127 Тернопольский национальный педагогический университет имени В. Гнатюка
+Тернопільський національний педагогічний університет імені Володимира Гнатюка
+Ternopil Volodymyr Hnatyuk National Pedagogical University
+www.tnpu.edu.ua UA
+128 Тернопольский национальный технический университет имени Ивана Пулюя
+Тернопільський національний технічний університет імені Івана Пулюя
+Ternopil Ivan Puluj National Technical University
+www.tntu.edu.ua UA, EN
+129 Тернопольский национальный экономический университет
+Тернопільський національний економічний університет
+Ternopil National Economic University
+www.tneu.edu.ua UA, RU, EN,
+DE
+130 Технический колледж Тернопольского национального технического университета имени Ивана Пулюя
+Технічний коледж Тернопільського національного технічного університету імені Івана Пулюя
+Technical College of Ternopil State Ivan Pul'uj Technical University
+http://tk.te.ua/ UA, RU
+131 Украинская академия печати
+Українська академія друкарства
+Ukrainian Academy of Printing
+http://www.uad.lviv.ua UA, RU
+132 Украинская инженерно-педагогическая академия
+Українська інженерно-педагогічна академія
+Ukrainian Engineering and Pedagogical Academy
+http://www.slavdpu.dn.ua UA, RU
+133 Украинский государственный университет железнодорожного транспорта
+Український державний університет залізничного транспорту
+Ukrainian State University of Railway Transport
+kart.edu.ua UA, RU
+134 Уманский государственный педагогический университет имени Павла Тычины
+Уманський державний педагогічний університет імені Павла Тичини
+Pavlo Tychyna Uman State Pedagogical University
+http://www.udpu.org.ua UA
+135 Уманский национальный университет садоводства
+Уманський національний університет садівництва
+Uman National University of Horticulture
+www.udau.edu.ua UA
+136 Университет государственной фискальной службы Украины
+Університет державної фіскальної служби України
+University of the State Fiscal Service of Ukraine
+http://www.nusta.edu.ua/ UA, RU
+137 Университет таможенного дела и финансов
+Університет митної справи та фінансів
+University of Customs and Finance
+http://umsf.dp.ua/ UA
+13
+8 Харьковская государственная академия дизайна и искусств
+Харківська державна академія дизайну і мистецтв
+Kharkiv State Academy of Design and Arts
+http://www.ksada.org UA
+139 Харьковская государственная академия культуры
+Харківська державна академія культури
+Kharkiv State Academy of Culture
+http://www.ic.ac.kharkov.ua/ UA, RU
+140 Харьковская государственная академия физической культуры
+Харківська державна академія фізичної культури
+Kharkiv State Academy of Physical Culture
+www.hgafk.org UA, RU
+141 Харьковская государственная зооветеринарная академия
+Харківська державна зооветеринарна академія
+Kharkiv State Zooveterinary Academy
+http://www.zoovet.kh.ua/ UA, RU
+142 Харьковская медицинская академия последипломного образования
+Харківська медична академія післядипломної освіти
+Kharkiv Medical Academy of Postgraduate Education
+http://med.edu.ua/ UA, RU
+143 Харьковский автомобильно
+-дорожный техникум
+Харківський автомобільно
+-дорожній технікум
+Kharkiv Automobile and Highway Technical School
+http://www
+.hadt
+.kharkov
+.ua
+/
+144 Харьковский государственный университет питания и торговли
+Харківський державний університет харчування та торгівлі
+Kharkiv State University of Food Technology and Trade
+www.hduht.edu.ua UA, RU, EN
+145 Харьковский институт финансов
+Харківський інститут фінансів
+Kharkiv Institute of Finance
+khif.edu.ua/ UA, RU
+146 Харьковский национальный автомобильно
+-дорожный университет
+Харківський національний автомобільно
+-дорожній університет
+Kharkiv National Automobile and Highway University http://www
+.khadi
+.kharkov
+.ua
+/ UA, RU
+147 Харьковский национальный аграрный университет имени В. В. Докучаева
+Харківський національний аграрний університет імені В. В. Докучаєва
+Kharkiv National Agrarian University named after V. Dokuchaev
+www.knau.kharkov.ua UA, RU
+148 Харьковский национальный медицинский университет
+Харківський національний медичний університет
+Kharkiv National Medical University
+http://www.knmu.kharkov.ua/ UA, RU
+149 Харьковский национальный педагогический университет имени Г. С. Сковороды
+Харківський національний педагогічний університет імені Г. С. Сковороди
+Kharkiv National Pedagogical University named after H. Skovoroda
+http://hnpu.edu.ua UA, RU
+150 Харьковский национальный технический университет сельского хозяйства имени Петра Василенко
+Харківський національний технічний університет сільського господарства імені Петра Василенка
+Kharkiv Petro Vasylenko National Technical University of Agriculture
+www.khntusg.com.ua UA, RU, EN
+151 Харьковский национальный университет городского хозяйства имени А. Н. Бекетова
+Харківський національний університет міського господарства імені О. М. Бекетова
+Kharkiv O.M. Beketov National University of Urban Economy
+http://kname.edu.ua/ UA, RU, EN
+152 Харьковский национальный университет имени В. Н. Каразина
+Харківський національний університет імені В. Н. Каразіна
+V.N. Karazin Kharkiv National University
+http://www.univer.kharkov.ua UA,
+RU, EN
+153 Харьковский национальный университет искусств имени И. П. Котляревского
+Харківський національний університет мистецтв імені І. П. Котляревського
+Kharkiv National Kotlyarevsky University of Arts
+http://dum.kharkov.ua/ UA, RU
+154 Харьковский национальный университет радиоэлектроники
+Харківський національний університет радіоелектроніки
+Kharkiv National University of Radio Electronics
+http://nure.ua/en/ UA, RU, EN
+155 Харьковский национальный университет строительства и архитектуры
+Харківський національний університет будівництва та архітектури
+Kharkiv national university of civil engineering and architecture
+www.kstuca.kharkov.ua UA, RU
+156 Харьковский национальный экономический университет имени Семёна Кузнеца
+Харківський національний економічний університет імені Семена Кузнеця
+Simon Kuznets Kharkiv National University of Economics
+http://www.hneu.edu.ua UA, RU, EN
+157 Харьковский университет Воздушных Сил имени Ивана Кожедуба
+Харківський університет Повітряних Сил імені Івана Кожедуба
+Kozhedub Air Force University Kharkiv
+http://www.hups.mil.gov.ua/ RU, EN
+158 Херсонская государственная морская академия
+Херсонська державна морська академія
+Kherson State Maritime Academy www.kmi.kherson.ua UA, RU
+159 Херсонский государственный университет
+Херсонський державний університет
+Kherson State University
+www.ksu.ks.ua UA, RU
+160 Херсонский национальный технический университет
+Херсонський національний технічний університет
+Kherson National Technical University
+http://www.kntu.net.ua UA
+161 Хмельницкий национальный университет
+Хмельницький національний університет
+Khmelnytskiy National University
+http://www.khnu.km.ua UA, RU
+162 Черкасский государственный технологический университет
+Черкаський державний технологічний університет
+Cherkasy State Technological University
+www.chdtu.edu.ua UA
+163 Черкасский национальный университет имени Богдана Хмельницкого
+Черкаський національний університет імені Богдана Хмельницького
+The Bohdan Khmelnytskyy National University of Cherkasy
+http://www.cdu.edu.ua/en/ UA, EN
+164 Черновецкий национальный университет имени Юрия Федьковича
+Чернівецький національний університет імені Юрія Федьковича
+Yuriy Fedkovych Chernivtsi National University
+http://www.chnu.edu.ua UA, RU
+165 Черноморский государственный университет имени Петра Могилы
+Чорноморський державний університет імені Петра Могили
+Petro Mohyla Black Sea State University
+http://www.chdu.edu.ua/ UA, EN
+166 Южноукраинский национальный педагогический университет имени К. Д. Ушинского
+Державний заклад "Південноукраїнський національний педагогічний університет імені К. Д. Ушинського"
+The South Ukrainian National Pedagogical University named after K. D. Ushynsky
+www.pdpu.edu.ua UA, RU
+167 Харьковский национальный университет внутренних дел
+Харківський національний університет внутрішніх справ
+Kharkiv National University of Internal Affairs
+http://www.univd.edu.ua/ UA, RU
+168 Черниговский национальный технологический университет
+Чернігівський національний технологічний університет
+Chernihiv National University of Technology
+stu.cn.ua
+international.stu.cn.ua UA, RU, EN
+169 Львовский торгово-экономический университет
+Львівський торговельно-економічний університет
+Lviv University of Trade
+http://www.lac.lviv.ua/ UA, EN
+170 Нежинский государственный университет имени Николая Гоголя
+Ніжинський державний університет імені Миколи Гоголя
+Nizhyn Gogol State University
+http://www.ndu.edu.ua/index.php/ua/ UA, RU, EN
+171 Криворожский государственный педагогический университет
+Криворізький державний педагогічний університет
+Kryvyi Rih State Pedagogical University
+http://old.kdpu.edu.ua/ UA, RU
+172 Днепропетровский государственный университет внутренних дел
+Дніпропетровський державний університет внутрішніх справ http://dduvs.in.ua/ UA, RU
+Dnipropetrovsk State University of Internal Affaires
