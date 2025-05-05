@@ -11,6 +11,4 @@ const UserFriends = sequelize.define('userFriends', {
     paranoid: true,
 });
 
-module.exports = {
-    UserFriends
-}
+module.exports = UserFriends;

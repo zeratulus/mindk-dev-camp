@@ -9,6 +9,4 @@ const UserOAuth = sequelize.define('userOAuth', {
     facebookId: {type: DataTypes.TEXT},
 });
 
-module.exports = {
-    UserOAuth
-}
+module.exports = UserOAuth;

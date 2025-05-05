@@ -1,7 +1,7 @@
 /* Default Scrollbars*/
 div.table-responsive::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 6px;
 }
 div.table-responsive::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
@@ -16,41 +16,25 @@ body::-webkit-scrollbar-thumb {
 }
 /* End of Default Scrollbars*/
 
-.App {
-  text-align: center;
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header-wrapper {
+  height: 70px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-post-content {
+  padding: 0 10px 0 10px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.user-post-actions {
+  padding: 0 10px 10px 10px !important;
 }
-
-.App-link {
-  color: #61dafb;
+.user-post-header {
+  padding: 10px 10px 0 10px !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-post-content img {
+  max-width: 100%;
+}
+.fw {
+  width: 100%;
 }

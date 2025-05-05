@@ -11,6 +11,4 @@ const UserUniversity = sequelize.define('userUniversity', {
     paranoid: true
 });
 
-module.exports = {
-    UserUniversity
-}
+module.exports = UserUniversity;

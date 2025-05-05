@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "@emotion/react";
 import {createTheme} from "@mui/material";
 import reportWebVitals from './reportWebVitals';
@@ -23,9 +24,11 @@ const appliedTheme = createTheme(isUserThemeDark ? dark : light);
 
 ReactDOM.render(
     <React.StrictMode>
-        <ThemeProvider theme={appliedTheme}>
-            <App/>
-        </ThemeProvider>
+        <BrowserRouter>
+            <ThemeProvider theme={appliedTheme}>
+                <App/>
+            </ThemeProvider>
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );

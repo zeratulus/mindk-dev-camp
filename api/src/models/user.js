@@ -18,6 +18,4 @@ const User = sequelize.define('user', {
     paranoid: true,
 });
 
-module.exports = {
-    User
-}
+module.exports = User;
