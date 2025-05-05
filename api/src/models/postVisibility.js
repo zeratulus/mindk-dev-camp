@@ -3,7 +3,8 @@ const {DataTypes} = require('sequelize');
 
 const PostVisibility = sequelize.define('postVisibility', {
     id: {type: DataTypes.UUID, primaryKey: true},
-    title: {type: DataTypes.TEXT}
+    postId: {type: DataTypes.UUID},
+    visibilityId: {type: DataTypes.UUID}
 });
 
 module.exports = PostVisibility;

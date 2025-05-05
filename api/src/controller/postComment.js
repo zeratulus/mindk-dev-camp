@@ -1,11 +1,11 @@
 const uuid = require('uuid');
 const postCommentary = require('../models/postCommentary');
+const User = require("../models/user");
 const {processError} = require("../utils");
 
 class PostCommentController {
 
     create(req, res) {
-        //TODO: validation rules required: userId, postId, body
         let content = req.body;
         if (content.body.length < 10) {
             res.status(400).json({success: false, message: 'Minimum content length is 10 symbols.'});
@@ -22,7 +22,14 @@ class PostCommentController {
     }
 
     findById(req, res) {
-        postCommentary.findByPk(req.params.id).then((data) => {
+        postCommentary.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['id', 'firstName', 'lastName', 'avatar']
+                }
+            ]
+        }).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
@@ -51,7 +58,20 @@ class PostCommentController {
     }
 
     find(req, res) {
-        postCommentary.findAll().then((data) => {
+        let options = {
+            include: [
+                {
+                    model: User,
+                    attributes: ['id', 'firstName', 'lastName', 'avatar']
+                }
+            ]
+        }
+
+        if (req.query.postId) {
+            options.where = {postId: req.query.postId};
+        }
+
+        postCommentary.findAll(options).then((data) => {
             res.send(data);
         }).catch((error) => {
             processError(res, error);
