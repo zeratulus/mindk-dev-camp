@@ -5,31 +5,21 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {UserPostContainer} from "../../containers/userPost";
 
-export function Feed() {
 
-    let posts = [];
+export function Feed({posts}) {
+
+    const feedItems = posts.map((post) =>
+        <UserPostContainer key={post.id} post={post}></UserPostContainer>
+    );
 
     return (
         <Container>
-            <CssBaseline />
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <Typography component="h1" variant="h5">
-                    Your Feed
-                </Typography>
-                <Box sx={{ mt: 1 }}>
-
-                    <UserPostContainer content={'Just some example content of UserPost'}></UserPostContainer>
-
-                    <UserPostContainer content={'Just some example content of UserPost'}></UserPostContainer>
-
-                </Box>
+            <CssBaseline/>
+            <Typography component="h1" variant="h5" sx={{ marginTop: '10px' }}>
+                Your Feed
+            </Typography>
+            <Box sx={{mt: 1}}>
+                {feedItems}
             </Box>
         </Container>
     );

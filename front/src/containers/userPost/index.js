@@ -1,5 +1,5 @@
 import {UserPost} from "../../components/userPost";
 
-export function UserPostContainer({content}) {
-    return <UserPost content={content}/>;
+export function UserPostContainer({post}) {
+    return <UserPost post={post}/>;
 }

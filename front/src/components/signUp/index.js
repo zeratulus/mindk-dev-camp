@@ -9,17 +9,61 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import {useState} from "react";
+import AxiosService from "../../services/AxiosService";
 
 export function SignUp() {
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
+
+    const handlePassword = (event) => {
+        setPassword(event.target.value);
+    }
+
+    const handlePasswordConfirm = (event) => {
+        setPasswordConfirm(event.target.value);
+    }
+
+    const handleEmail = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const handlePhone = (event) => {
+        setPhone(event.target.value);
+    }
+
+    const handleFirstName = (event) => {
+        setFirstName(event.target.value);
+    }
+
+    const handleLastName = (event) => {
+        setLastName(event.target.value);
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
+
+        let data = {
+            email,
+            phone,
+            firstName,
+            lastName,
+            password,
+            passwordConfirm
+        };
+
+        console.log(data)
+
+        AxiosService.post(`/user`, data).then(res => {
+            console.log(res);
         });
     };
+
 
     return (
         <Container component="main" maxWidth="xs">
@@ -49,6 +93,7 @@ export function SignUp() {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                onChange={handleFirstName}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -59,6 +104,7 @@ export function SignUp() {
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="family-name"
+                                onChange={handleLastName}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -69,6 +115,7 @@ export function SignUp() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                onChange={handleEmail}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -79,6 +126,7 @@ export function SignUp() {
                                 label="Phone number"
                                 name="phone"
                                 autoComplete="phone"
+                                onChange={handlePhone}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -90,6 +138,7 @@ export function SignUp() {
                                 type="password"
                                 id="password"
                                 autoComplete="new-password"
+                                onChange={handlePassword}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -101,6 +150,7 @@ export function SignUp() {
                                 type="password"
                                 id="password-confirm"
                                 autoComplete="password-confirm"
+                                onChange={handlePasswordConfirm}
                             />
                         </Grid>
                     </Grid>

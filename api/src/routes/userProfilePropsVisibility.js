@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const controller = require('../controller/userProfilePropsVisibility');
+
+router.post('/', controller.create);
+router.get('/', controller.find);
+router.get('/:id', controller.findById);
+router.put('/:id', controller.update);
+router.delete('/:id', controller.deleteById);
+
+module.exports = router;

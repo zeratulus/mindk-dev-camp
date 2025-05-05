@@ -1,7 +1,17 @@
+const url = require("url");
 const config = require("../services/config");
+
+const asyncLogHandler = (fn) => (req, res, next) => {
+    return Promise.resolve(fn(req, res, next)).then(next).catch(next);
+}
 
 function log(msg) {
     console.log(`${new Date().toISOString()} -> ${msg}`);
+}
+
+function logObj(msg, obj) {
+    console.log(`${new Date().toISOString()} -> ${msg}`);
+    console.log(obj);
 }
 
 function processError(res, error) {
@@ -13,7 +23,38 @@ function processError(res, error) {
     res.status(500).json(result);
 }
 
+function getPagination(req) {
+    const limit = req.body.limit ? req.body.limit : 10;
+    const offset = req.body.page ? req.body.page * limit : 0;
+
+    return {limit, offset, page};
+}
+
+function getUrlSearchParamsFromRequest(req, params) {
+    let results = [];
+    for (let param in params) {
+        if (req.body.has(param)) {
+            results.push({
+                key: param,
+                value: req.body.get(param)
+            });
+        }
+    }
+    return results;
+}
+
+function getUrlFromRequest(req) {
+    return url.format({
+        protocol: req.protocol,
+        host: req.get('host'),
+        pathname: req.originalUrl
+    });
+}
+
 module.exports = {
     log,
-    processError
+    logObj,
+    processError,
+    getPagination,
+    getUrlFromRequest
 }
